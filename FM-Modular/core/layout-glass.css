@@ -48,6 +48,7 @@
 #app-mount .members_c8ffbb,
 #app-mount .container_c8ffbb,
 #app-mount .chatContent_f75fb0,
+#app-mount .panels_c48ade,
 #app-mount .container__37e49,
 #app-mount .panel__5dec7,
 #app-mount .activityPanel__5e434,
@@ -95,6 +96,7 @@
   border-left: 1px solid rgba(var(--fm-main-rgb), 0.14) !important;
 }
 
+#app-mount .panels_c48ade,
 #app-mount .container__37e49,
 #app-mount .panel__5dec7,
 #app-mount .activityPanel__5e434,
@@ -106,6 +108,7 @@
   box-shadow: var(--fm-shadow-card) !important;
 }
 
+#app-mount .themed__9293f,
 #app-mount .container__9293f.themed__9293f,
 #app-mount .header_c6bf1b,
 #app-mount .header_f37cb1,
