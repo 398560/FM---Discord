@@ -1,14 +1,14 @@
 /**
- * @name FM / Trojan Purple
+ * @name FM / Preto
  * @author Plague Doctor
- * @description Modular purple neon glass preset for Discord
+ * @description Black glass preset based on the original Preto Variação theme
  * @version 3.0.0
  */
 
 @import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/core/variables.css");
 @import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/features.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/palettes/purple.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/animations/dramatic.css");
+@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/palettes/preto.css");
+@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/animations/minimal.css");
 @import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/core/reset.css");
 @import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/core/discord-vars.css");
 @import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/core/background.css");

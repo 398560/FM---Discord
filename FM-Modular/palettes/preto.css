@@ -1,0 +1,32 @@
+/* Palette: Preto
+ * Versao escura inspirada no tema preto original, com contraste frio e glow discreto.
+ */
+
+:root {
+  --fm-main-color: #a6a6a6;
+  --fm-secondary-color: #1a1a1a;
+  --fm-main-rgb: 166, 166, 166;
+  --fm-secondary-rgb: 26, 26, 26;
+
+  --fm-text-color: #f2f2f2;
+  --fm-text-rgb: 242, 242, 242;
+  --fm-muted-color: #b8b8b8;
+  --fm-muted-rgb: 184, 184, 184;
+
+  --fm-sidebar-opacity: 0.40;
+  --fm-chat-opacity: 0.03;
+  --fm-panel-opacity: 0.26;
+  --fm-menu-opacity: 0.86;
+
+  --fm-bg-overlay-top: 0.34;
+  --fm-bg-overlay-bottom: 0.56;
+
+  --fm-glow-strength: 0.12;
+  --fm-border-strength: 0.26;
+
+  --fm-bg: url("https://files.catbox.moe/44fu7x.jpg");
+  --fm-gif-bg: url("https://files.catbox.moe/b1b4a1.jpg");
+
+  --fm-watermark-text: "ＦＭ • FARMANDO DISCORD";
+  --fm-jp-text: "ファーム • 死神";
+}
