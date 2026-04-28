@@ -6,8 +6,8 @@
 #app-mount .message__5126c {
   border-radius: var(--fm-radius-sm);
   border: 1px solid transparent;
-  background: rgba(0, 0, 0, var(--fm-message-opacity));
-  backdrop-filter: blur(1px);
+  background: rgba(0, 0, 0, var(--fm-message-opacity)) !important;
+  backdrop-filter: blur(1px) !important;
   transition: background-color 0.16s ease, box-shadow 0.16s ease;
 }
 
@@ -16,9 +16,9 @@
     90deg,
     rgba(var(--fm-main-rgb), var(--fm-message-hover-opacity)),
     transparent 76%
-  );
-  border-color: rgba(var(--fm-main-rgb), 0.08);
-  box-shadow: inset 3px 0 0 rgba(var(--fm-main-rgb), 0.30);
+  ) !important;
+  border-color: rgba(var(--fm-main-rgb), 0.08) !important;
+  box-shadow: inset 3px 0 0 rgba(var(--fm-main-rgb), 0.30) !important;
 }
 
 #app-mount .mentioned__5126c,
@@ -29,8 +29,8 @@
     90deg,
     rgba(var(--fm-main-rgb), var(--fm-message-active-opacity)),
     rgba(var(--fm-secondary-rgb), calc(var(--fm-message-active-opacity) * 0.42))
-  );
-  border-color: rgba(var(--fm-main-rgb), 0.12);
+  ) !important;
+  border-color: rgba(var(--fm-main-rgb), 0.12) !important;
 }
 
 #app-mount .mentioned__5126c::before,
@@ -58,8 +58,8 @@
 #app-mount .reaction_f8896c,
 #app-mount .pill_a2c9e8 {
   border-radius: var(--fm-radius-sm);
-  background: rgba(0, 0, 0, var(--fm-reaction-surface-opacity));
-  border: 1px solid var(--fm-border-soft);
+  background: rgba(0, 0, 0, var(--fm-reaction-surface-opacity)) !important;
+  border: 1px solid var(--fm-border-soft) !important;
   transition:
     transform var(--fm-transition),
     border-color var(--fm-transition),
@@ -70,16 +70,16 @@
 #app-mount .reaction__23977:hover,
 #app-mount .reaction_f8896c:hover,
 #app-mount .pill_a2c9e8:hover {
-  background-color: rgba(var(--fm-main-rgb), 0.14);
-  border-color: var(--fm-border);
+  background-color: rgba(var(--fm-main-rgb), 0.14) !important;
+  border-color: var(--fm-border) !important;
   transform: translateY(-1px);
   box-shadow: 0 8px 18px rgba(var(--fm-main-rgb), 0.14);
 }
 
 #app-mount .reaction__23977.reactionMe__23977,
 #app-mount .pill_a2c9e8.selected_a2c9e8 {
-  background: linear-gradient(135deg, rgba(var(--fm-main-rgb), 0.32), rgba(var(--fm-secondary-rgb), 0.16));
-  border-color: rgba(var(--fm-main-rgb), 0.48);
+  background: linear-gradient(135deg, rgba(var(--fm-main-rgb), 0.32), rgba(var(--fm-secondary-rgb), 0.16)) !important;
+  border-color: rgba(var(--fm-main-rgb), 0.48) !important;
 }
 
 #app-mount .reactionCount__23977,
