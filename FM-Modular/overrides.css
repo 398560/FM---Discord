@@ -70,6 +70,32 @@
   border: 1px solid rgba(var(--fm-main-rgb), 0.32) !important;
 }
 
+/* User profile & popouts */
+#app-mount .outer_c0bea0,
+#app-mount .userProfileOuter_c0bea0,
+#app-mount .userProfileOuterThemed_c0bea0,
+#app-mount [class*="outer_"][class*="c0bea0"] {
+  background: rgba(var(--fm-main-rgb), var(--fm-popout-glass-top)) !important;
+  border: 1px solid var(--fm-border-hot) !important;
+  border-radius: var(--fm-radius-lg) !important;
+  box-shadow: var(--fm-glow-soft) !important;
+  backdrop-filter: blur(var(--fm-blur-strong-effective)) saturate(145%);
+}
+
+#app-mount .overlay_c0bea0,
+#app-mount .fullSizeOverlayBackground_c0bea0,
+#app-mount [class*="overlay_"][class*="c0bea0"] {
+  background: rgba(0, 0, 0, var(--fm-overlay-surface-opacity)) !important;
+}
+
+#app-mount .container__37e49,
+#app-mount [class^="container_"][class*="37e49"] {
+  background: var(--fm-gradient-panel) !important;
+  border: 1px solid rgba(var(--fm-main-rgb), 0.24) !important;
+  border-radius: var(--fm-radius-md) !important;
+  box-shadow: var(--fm-glow-soft) !important;
+}
+
 /* Vesktop */
 #app-mount [class*="vesktop"],
 #app-mount [class*="vc-spotify"],
