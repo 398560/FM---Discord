@@ -75,14 +75,18 @@
 #app-mount .chat_f75fb0,
 #app-mount .chatContent_f75fb0 {
   background:
-    linear-gradient(180deg, rgba(14, 5, 9, 0.16), rgba(14, 5, 9, 0.06)) !important;
+    linear-gradient(
+      180deg,
+      rgba(14, 5, 9, var(--fm-chat-glass-top)),
+      rgba(14, 5, 9, var(--fm-chat-glass-bottom))
+    ) !important;
 }
 
 #app-mount .messagesWrapper__36d07,
 #app-mount .scrollerInner__36d07,
 #app-mount .container__36d07,
 #app-mount .content_f75fb0 {
-  background: transparent !important;
+  background: rgba(0, 0, 0, var(--fm-chat-layer-opacity)) !important;
 }
 
 #app-mount .members_c8ffbb,
