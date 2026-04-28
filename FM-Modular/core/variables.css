@@ -23,6 +23,12 @@
   --fm-menu-opacity: 0.88;
   --fm-card-opacity: 0.60;
   --fm-popout-opacity: 0.84;
+  --fm-chat-glass-top: 0.16;
+  --fm-chat-glass-bottom: 0.06;
+  --fm-chat-layer-opacity: 0;
+  --fm-message-opacity: 0;
+  --fm-message-hover-opacity: 0.06;
+  --fm-message-active-opacity: 0.12;
 
   --fm-bg-overlay-top: 0.14;
   --fm-bg-overlay-bottom: 0.28;
