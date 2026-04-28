@@ -8,7 +8,7 @@
 #app-mount .searchBarComponent__35e86,
 #app-mount .searchBar__5ec2f,
 #app-mount .searchBar_e6b769 {
-  background: rgba(0, 0, 0, 0.22);
+  background: rgba(0, 0, 0, var(--fm-search-surface-opacity));
   border: 1px solid rgba(var(--fm-main-rgb), 0.20);
   border-radius: var(--fm-radius-sm);
   color: var(--fm-text-color);
@@ -78,7 +78,7 @@
 }
 
 #app-mount [class*="divider_"] [class*="content_"] {
-  background: rgba(22, 10, 18, 0.76);
+  background: rgba(22, 10, 18, calc(var(--fm-surface-opacity-strong) + 0.04));
   color: rgba(var(--fm-muted-rgb), 0.70);
   border: 1px solid rgba(var(--fm-main-rgb), 0.30);
   border-radius: 999px;

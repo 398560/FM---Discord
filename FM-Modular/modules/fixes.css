@@ -45,7 +45,7 @@
 #app-mount .theme-dark .contentRegionScroller__23e6b,
 #app-mount .theme-dark .standardSidebarView__23e6b,
 #app-mount .contentRegion__23e6b {
-  background: rgba(12, 4, 9, 0.24);
+  background: rgba(12, 4, 9, var(--fm-surface-opacity-mid));
 }
 
 #app-mount .large__49fc1,
@@ -60,7 +60,7 @@
 #app-mount .toast__3fde7,
 #app-mount .container__9a9f9,
 #app-mount .container_cb32c7 {
-  background: linear-gradient(180deg, rgba(33, 12, 20, 0.86), rgba(10, 4, 8, 0.92));
+  background: var(--fm-gradient-soft);
   border: 1px solid rgba(var(--fm-main-rgb), 0.26);
   border-radius: 14px;
   box-shadow: var(--fm-shadow-strong);
@@ -72,7 +72,7 @@
 #app-mount .footer__49fc1,
 #app-mount .footer__3ec70,
 #app-mount .bd-modal-footer {
-  background: rgba(0, 0, 0, 0.22);
+  background: rgba(0, 0, 0, var(--fm-header-surface-opacity));
   border-top: 1px solid rgba(var(--fm-main-rgb), 0.12);
 }
 

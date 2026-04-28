@@ -29,6 +29,25 @@
   --fm-message-opacity: 0;
   --fm-message-hover-opacity: 0.06;
   --fm-message-active-opacity: 0.12;
+  --fm-sidebar-glass-top: 0.24;
+  --fm-sidebar-glass-bottom: 0.34;
+  --fm-panel-glass-top: 0.22;
+  --fm-panel-glass-bottom: 0.30;
+  --fm-members-glass-top: 0.16;
+  --fm-members-glass-bottom: 0.24;
+  --fm-popout-glass-top: 0.26;
+  --fm-popout-glass-bottom: 0.36;
+  --fm-input-glass-top: 0.18;
+  --fm-input-glass-bottom: 0.24;
+  --fm-surface-opacity-soft: 0.10;
+  --fm-surface-opacity-mid: 0.14;
+  --fm-surface-opacity-strong: 0.22;
+  --fm-header-surface-opacity: 0.14;
+  --fm-search-surface-opacity: 0.12;
+  --fm-overlay-surface-opacity: 0.12;
+  --fm-card-surface-opacity: 0.08;
+  --fm-card-surface-hover-opacity: 0.12;
+  --fm-reaction-surface-opacity: 0.12;
 
   --fm-bg-overlay-top: 0.14;
   --fm-bg-overlay-bottom: 0.28;
@@ -55,10 +74,10 @@
   --fm-app-margin: 18px;
   --fm-app-radius: 18px;
 
-  --fm-surface-1: rgba(18, 7, 12, 0.18);
-  --fm-surface-2: rgba(20, 8, 14, 0.46);
-  --fm-surface-3: rgba(28, 10, 18, 0.72);
-  --fm-surface-4: rgba(10, 4, 8, 0.92);
+  --fm-surface-1: rgba(18, 7, 12, 0.10);
+  --fm-surface-2: rgba(20, 8, 14, 0.14);
+  --fm-surface-3: rgba(28, 10, 18, 0.22);
+  --fm-surface-4: rgba(10, 4, 8, 0.32);
 
   --fm-text-strong: rgba(var(--fm-text-rgb), 0.97);
   --fm-text-soft: rgba(var(--fm-text-rgb), 0.84);
@@ -71,10 +90,31 @@
 
   --fm-gradient-main: linear-gradient(135deg, rgba(var(--fm-main-rgb), 0.34), rgba(var(--fm-secondary-rgb), 0.16));
   --fm-gradient-strong: linear-gradient(135deg, rgba(var(--fm-main-rgb), 0.68), rgba(var(--fm-secondary-rgb), 0.34));
-  --fm-gradient-soft: linear-gradient(180deg, rgba(28, 10, 18, var(--fm-menu-opacity)), rgba(10, 4, 8, 0.92));
-  --fm-gradient-panel: linear-gradient(180deg, rgba(34, 13, 22, 0.58), rgba(11, 4, 8, 0.76));
-  --fm-gradient-sidebar: linear-gradient(180deg, rgba(26, 10, 17, 0.56), rgba(10, 4, 8, 0.72));
-  --fm-gradient-input: linear-gradient(180deg, rgba(33, 12, 21, 0.74), rgba(14, 5, 10, 0.84));
+  --fm-gradient-soft: linear-gradient(
+    180deg,
+    rgba(28, 10, 18, var(--fm-popout-glass-top)),
+    rgba(10, 4, 8, var(--fm-popout-glass-bottom))
+  );
+  --fm-gradient-panel: linear-gradient(
+    180deg,
+    rgba(34, 13, 22, var(--fm-panel-glass-top)),
+    rgba(11, 4, 8, var(--fm-panel-glass-bottom))
+  );
+  --fm-gradient-sidebar: linear-gradient(
+    180deg,
+    rgba(26, 10, 17, var(--fm-sidebar-glass-top)),
+    rgba(10, 4, 8, var(--fm-sidebar-glass-bottom))
+  );
+  --fm-gradient-members: linear-gradient(
+    180deg,
+    rgba(24, 10, 16, var(--fm-members-glass-top)),
+    rgba(10, 4, 8, var(--fm-members-glass-bottom))
+  );
+  --fm-gradient-input: linear-gradient(
+    180deg,
+    rgba(33, 12, 21, var(--fm-input-glass-top)),
+    rgba(14, 5, 10, var(--fm-input-glass-bottom))
+  );
   --fm-gradient-shine: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.16) 48%, transparent 100%);
 
   --fm-border: rgba(var(--fm-main-rgb), var(--fm-border-strength));

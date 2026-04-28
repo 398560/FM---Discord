@@ -36,7 +36,7 @@
 #app-mount .upload_aa605f,
 #app-mount .file__0ccae,
 #app-mount .uploadContainer_aa605f {
-  background: rgba(8, 3, 6, 0.34) !important;
+  background: rgba(8, 3, 6, calc(var(--fm-surface-opacity-strong) + 0.02)) !important;
   border: 1px solid rgba(var(--fm-main-rgb), 0.16) !important;
   border-radius: var(--fm-radius-sm) !important;
 }

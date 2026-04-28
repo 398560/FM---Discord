@@ -91,8 +91,7 @@
 
 #app-mount .members_c8ffbb,
 #app-mount .container_c8ffbb {
-  background:
-    linear-gradient(180deg, rgba(24, 10, 16, 0.32), rgba(10, 4, 8, 0.52)) !important;
+  background: var(--fm-gradient-members) !important;
   border-left: 1px solid rgba(var(--fm-main-rgb), 0.14) !important;
 }
 
@@ -101,8 +100,7 @@
 #app-mount .activityPanel__5e434,
 #app-mount .container_e131a9,
 #app-mount #vc-spotify-player {
-  background:
-    linear-gradient(180deg, rgba(35, 13, 21, 0.78), rgba(14, 5, 10, 0.88)) !important;
+  background: var(--fm-gradient-panel) !important;
   border: 1px solid rgba(var(--fm-main-rgb), 0.24) !important;
   border-radius: var(--fm-radius-md) !important;
   box-shadow: var(--fm-shadow-card) !important;
@@ -112,7 +110,7 @@
 #app-mount .header_c6bf1b,
 #app-mount .header_f37cb1,
 #app-mount .titleContainer_e29cd7 {
-  background: rgba(0, 0, 0, 0.20) !important;
+  background: rgba(0, 0, 0, var(--fm-header-surface-opacity)) !important;
   border-bottom: 1px solid var(--fm-border-soft);
   backdrop-filter: blur(calc(var(--fm-blur-effective) * 1.1)) saturate(140%);
 }

@@ -58,7 +58,7 @@
 #app-mount .reaction_f8896c,
 #app-mount .pill_a2c9e8 {
   border-radius: var(--fm-radius-sm);
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(0, 0, 0, var(--fm-reaction-surface-opacity));
   border: 1px solid var(--fm-border-soft);
   transition:
     transform var(--fm-transition),
@@ -104,7 +104,7 @@
 
 #app-mount .content__908e2,
 #app-mount .endCap__908e2 {
-  background: rgba(0, 0, 0, 0.18) !important;
+  background: rgba(0, 0, 0, calc(var(--fm-surface-opacity-mid) + 0.02)) !important;
   color: rgba(var(--fm-main-rgb), 0.96) !important;
   backdrop-filter: blur(24px);
 }

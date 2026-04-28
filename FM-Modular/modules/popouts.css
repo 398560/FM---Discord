@@ -46,7 +46,7 @@
 #app-mount .quickswitcher_ac6cb0 .input_ac6cb0,
 #app-mount .input__0ed4f,
 #app-mount .searchBoxInput_f69601 {
-  background: rgba(0, 0, 0, 0.28) !important;
+  background: rgba(0, 0, 0, calc(var(--fm-search-surface-opacity) + 0.02)) !important;
   border: 1px solid rgba(var(--fm-main-rgb), 0.20) !important;
   border-radius: 12px !important;
   color: var(--fm-text-strong) !important;
