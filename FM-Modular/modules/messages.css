@@ -6,22 +6,22 @@
 #app-mount .message__5126c {
   border-radius: var(--fm-radius-sm);
   border: 1px solid transparent;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(1px);
   transition: background-color 0.16s ease, box-shadow 0.16s ease;
 }
 
 #app-mount .message__5126c:hover {
-  background: linear-gradient(90deg, rgba(var(--fm-main-rgb), 0.08), transparent 76%);
-  border-color: rgba(var(--fm-main-rgb), 0.10);
-  box-shadow: inset 3px 0 0 rgba(var(--fm-main-rgb), 0.38);
+  background: linear-gradient(90deg, rgba(var(--fm-main-rgb), 0.06), transparent 76%);
+  border-color: rgba(var(--fm-main-rgb), 0.08);
+  box-shadow: inset 3px 0 0 rgba(var(--fm-main-rgb), 0.30);
 }
 
 #app-mount .mentioned__5126c,
 #app-mount .replying__5126c,
 #app-mount .ephemeral__5126c,
 #app-mount .message__5126c.selected__5126c {
-  background: linear-gradient(90deg, rgba(var(--fm-main-rgb), 0.18), rgba(var(--fm-secondary-rgb), 0.08));
-  border-color: rgba(var(--fm-main-rgb), 0.18);
+  background: linear-gradient(90deg, rgba(var(--fm-main-rgb), 0.12), rgba(var(--fm-secondary-rgb), 0.05));
+  border-color: rgba(var(--fm-main-rgb), 0.12);
 }
 
 #app-mount .mentioned__5126c::before,
