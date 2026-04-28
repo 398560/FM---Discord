@@ -1,0 +1,71 @@
+/**
+ * Input area
+ * Modulo da caixa de mensagem, anexos, reply bar e botoes do composer.
+ */
+
+#app-mount .formWithLoadedChatInput_f75fb0::before,
+#app-mount .chatTypingGradientNotAtBottom__36d07,
+#app-mount .chatTypingGradientAtBottom__36d07,
+#app-mount .chatGradient__36d07,
+#app-mount .stackedBars__74017 {
+  background: none !important;
+}
+
+#app-mount .channelTextArea_fb64c9,
+#app-mount .channelTextArea_f75fb0,
+#app-mount .channelTextArea__74017,
+#app-mount .channelTextArea__74017:focus-within,
+#app-mount .scrollableContainer__74017,
+#app-mount .replyBar__841c8,
+#app-mount .threadSuggestionBar__841c8,
+#app-mount .clipContainer__841c8,
+#app-mount .contentContainer_d9be46 .channelTextArea__74017,
+#app-mount .contentContainer_d9be46 .channelTextArea__74017:focus-within {
+  background: var(--fm-gradient-input) !important;
+  border: 1px solid rgba(var(--fm-main-rgb), 0.32) !important;
+  border-radius: var(--fm-radius-md) !important;
+  box-shadow: var(--fm-shadow-card), var(--fm-shadow-inset) !important;
+}
+
+#app-mount .scrollableContainer__74017:focus-within {
+  border-color: rgba(var(--fm-main-rgb), 0.55) !important;
+  box-shadow: var(--fm-shadow-strong), inset 0 0 0 1px rgba(var(--fm-main-rgb), 0.24) !important;
+}
+
+#app-mount .channelAttachmentArea_b77158,
+#app-mount .upload_aa605f,
+#app-mount .file__0ccae,
+#app-mount .uploadContainer_aa605f {
+  background: rgba(8, 3, 6, 0.34) !important;
+  border: 1px solid rgba(var(--fm-main-rgb), 0.16) !important;
+  border-radius: var(--fm-radius-sm) !important;
+}
+
+#app-mount .slateTextArea_ec4baf,
+#app-mount .placeholder__1b31f,
+#app-mount .textArea__74017 {
+  color: var(--fm-text-color) !important;
+}
+
+#app-mount .buttons__74017 > *,
+#app-mount .attachButton__0923f,
+#app-mount .attachButtonPlus__0923f,
+#app-mount .button__201d5,
+#app-mount .button__581d0,
+#app-mount .button_f7ecac {
+  color: rgba(var(--fm-muted-rgb), 0.92) !important;
+  transition:
+    transform var(--fm-transition),
+    color var(--fm-transition),
+    filter var(--fm-transition);
+}
+
+#app-mount .buttons__74017 > *:hover,
+#app-mount .attachButton__0923f:hover,
+#app-mount .button__201d5:hover,
+#app-mount .button__581d0:hover,
+#app-mount .button_f7ecac:hover {
+  color: var(--fm-main-color) !important;
+  transform: translateY(-1px);
+  filter: drop-shadow(0 0 5px rgba(var(--fm-main-rgb), 0.45));
+}

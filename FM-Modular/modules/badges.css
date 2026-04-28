@@ -1,0 +1,42 @@
+/* Badges
+ * Contadores, menções, roles, tags e pequenos indicadores visuais.
+ */
+
+#app-mount .numberBadge__2b1f5,
+#app-mount .textBadge__2b1f5,
+#app-mount [class*="mentionsBadge_"],
+#app-mount [class*="iconBadge_"],
+#app-mount .newBadge_faa96b,
+#app-mount .botTagRegular__82f07,
+#app-mount .tag_d0ccaf {
+  background: linear-gradient(135deg, rgb(var(--fm-main-rgb)), rgb(var(--fm-secondary-rgb)));
+  color: white;
+  border: 1px solid rgba(var(--fm-main-rgb), 0.34);
+  border-radius: 10px;
+}
+
+#app-mount .role__48c1c,
+#app-mount .role_dfa8b6,
+#app-mount .pill_a2c9e8 {
+  background: rgba(var(--fm-main-rgb), 0.16);
+  border: 1px solid rgba(var(--fm-main-rgb), 0.28);
+  color: var(--fm-text-strong);
+  border-radius: var(--fm-radius-sm);
+}
+
+#app-mount .markup__75297 [class*="mention"],
+#app-mount .mention {
+  background: rgba(var(--fm-main-rgb), 0.18);
+  color: rgba(var(--fm-muted-rgb), 0.95);
+  border: 1px solid rgba(var(--fm-main-rgb), 0.28);
+  border-radius: 4px;
+  padding: 0 4px;
+  font-weight: 600;
+  transition: background-color var(--fm-transition), color var(--fm-transition);
+}
+
+#app-mount .markup__75297 [class*="mention"]:hover,
+#app-mount .mention:hover {
+  background: rgba(var(--fm-main-rgb), 0.30);
+  color: white;
+}

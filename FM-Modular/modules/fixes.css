@@ -1,0 +1,95 @@
+/* Fixes
+ * Correcoes para Visual Refresh, Vesktop e superfícies que insistem em ficar opacas.
+ * Este modulo deve ficar perto do final da cadeia de imports.
+ */
+
+#app-mount .content__5e434,
+#app-mount .page__5e434,
+#app-mount .tabBody__133bf,
+#app-mount .container__133bf,
+#app-mount .nowPlayingColumn__133bf,
+#app-mount .homeWrapper__0920e,
+#app-mount .applicationStore_f07d62,
+#app-mount .shop__6db1d,
+#app-mount .shopScroll_e77fa3,
+#app-mount .pageWrapper_e77fa3,
+#app-mount .container__955a3,
+#app-mount .container__551b0,
+#app-mount .scroller__23746,
+#app-mount .container__0be77,
+#app-mount .container__0b563,
+#app-mount .header__0b563,
+#app-mount .pageBody__41ed7,
+#app-mount .channelRow_e4503a,
+#app-mount .container_c2efea,
+#app-mount .mainTableContainer__09a38,
+#app-mount .container__0f2e8,
+#app-mount .container__01ae2,
+#app-mount .subtitleContainer_f75fb0,
+#app-mount .title_f75fb0,
+#app-mount .themedBackground__74017,
+#app-mount .chatGradient__36d07,
+#app-mount .form_f75fb0::before,
+#app-mount .children__9293f::after,
+#app-mount .sidebarList__5e434,
+#app-mount .guilds__5e434,
+#app-mount .container__34c2c,
+#app-mount .header__34c2c,
+#app-mount .footer_d71945 {
+  background: transparent;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+#app-mount .theme-dark .sidebarRegionScroller__23e6b,
+#app-mount .theme-dark .contentRegionScroller__23e6b,
+#app-mount .theme-dark .standardSidebarView__23e6b,
+#app-mount .contentRegion__23e6b {
+  background: rgba(12, 4, 9, 0.24);
+}
+
+#app-mount .large__49fc1,
+#app-mount .medium__49fc1,
+#app-mount .small__49fc1,
+#app-mount .modal_b545d5,
+#app-mount .form__918e5,
+#app-mount .oauth2ModalWrapper_c2b22e,
+#app-mount .bd-modal-root,
+#app-mount .prompt_fe70ca,
+#app-mount .root__49fc1,
+#app-mount .toast__3fde7,
+#app-mount .container__9a9f9,
+#app-mount .container_cb32c7 {
+  background: linear-gradient(180deg, rgba(33, 12, 20, 0.86), rgba(10, 4, 8, 0.92));
+  border: 1px solid rgba(var(--fm-main-rgb), 0.26);
+  border-radius: 14px;
+  box-shadow: var(--fm-shadow-strong);
+  backdrop-filter: blur(30px) saturate(150%);
+}
+
+#app-mount .header_d0b769,
+#app-mount .footer_f24a96,
+#app-mount .footer__49fc1,
+#app-mount .footer__3ec70,
+#app-mount .bd-modal-footer {
+  background: rgba(0, 0, 0, 0.22);
+  border-top: 1px solid rgba(var(--fm-main-rgb), 0.12);
+}
+
+#app-mount .toast__3fde7 {
+  color: white;
+}
+
+#app-mount .container__9a337.isOpen__9a337,
+#app-mount .voiceChannelsButton_a08117,
+#app-mount .actionButtons_cc1819,
+#app-mount .closeButton__6088c .buttonInner_aec7ab {
+  border-color: rgba(var(--fm-main-rgb), 0.42);
+}
+
+#app-mount #vc-spotify-player,
+#app-mount [class*="vc-spotify"],
+#app-mount [class*="vesktop"],
+#app-mount [class*="vencord"] {
+  border-radius: var(--fm-radius-md);
+}

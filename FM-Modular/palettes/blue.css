@@ -1,0 +1,28 @@
+/* Palette: Blue
+ * Variante azul fria para temas vapor e clean glass.
+ */
+
+:root {
+  --fm-main-color: #6ab8ff;
+  --fm-secondary-color: #2a79d8;
+  --fm-main-rgb: 106, 184, 255;
+  --fm-secondary-rgb: 42, 121, 216;
+
+  --fm-text-color: #eff8ff;
+  --fm-text-rgb: 239, 248, 255;
+  --fm-muted-color: #bfdcff;
+  --fm-muted-rgb: 191, 220, 255;
+
+  --fm-sidebar-opacity: 0.36;
+  --fm-chat-opacity: 0.05;
+  --fm-panel-opacity: 0.29;
+  --fm-menu-opacity: 0.88;
+  --fm-glow-strength: 0.17;
+  --fm-border-strength: 0.24;
+
+  --fm-bg: url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80");
+  --fm-gif-bg: radial-gradient(circle at top, rgba(106, 184, 255, 0.20), transparent 40%);
+
+  --fm-watermark-text: "ＦＭ • BLUE GLASS";
+  --fm-jp-text: "青 • 霧";
+}

@@ -1,0 +1,74 @@
+/**
+ * Emoji picker
+ * Emoji, GIF e sticker picker com visual glass e wallpaper secundario.
+ */
+
+#app-mount .drawerSizingWrapper__08434::before,
+#app-mount .contentWrapper__08434::before,
+#app-mount .contentWrapper_eab878::before {
+  content: none !important;
+  display: none !important;
+}
+
+#app-mount .drawerSizingWrapper__08434,
+#app-mount .positionContainer__08434 {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+#app-mount .contentWrapper__08434,
+#app-mount .contentWrapper_eab878,
+#app-mount .emojiPicker_c0e32c,
+#app-mount .wrapper__14245 {
+  background-image:
+    linear-gradient(rgba(28, 12, 20, 0.72), rgba(28, 12, 20, 0.72)),
+    var(--fm-gif-bg) !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  border: 1px solid var(--fm-border-hot) !important;
+  border-radius: var(--fm-radius-lg) !important;
+  box-shadow: var(--fm-glow-mid), 0 0 40px rgba(var(--fm-main-rgb), 0.12) !important;
+  overflow: hidden !important;
+}
+
+#app-mount .header_c0e32c,
+#app-mount .header_fed6d3,
+#app-mount .container__0800c,
+#app-mount .emojiPickerHeader__0800c,
+#app-mount .inspector_aeaaeb,
+#app-mount .unicodeShortcut_b9ee0c {
+  background: rgba(0, 0, 0, 0.24) !important;
+  backdrop-filter: blur(4px) !important;
+}
+
+#app-mount .container_fea832,
+#app-mount .container_a45028,
+#app-mount .container_fed6d3,
+#app-mount .searchBox_d9c882,
+#app-mount .searchBox_d727b3 {
+  background-color: rgba(0, 0, 0, 0.40) !important;
+  border: 1px solid rgba(var(--fm-main-rgb), 0.26);
+  border-radius: var(--fm-radius-sm);
+}
+
+#app-mount .contentWrapper__08434 [class*="scroller"],
+#app-mount .contentWrapper_eab878 [class*="scroller"],
+#app-mount .emojiPicker_c0e32c [class*="scroller"],
+#app-mount .wrapper__14245 [class*="scroller"] {
+  background: transparent !important;
+}
+
+#app-mount .result__2dc39,
+#app-mount .result_e3c1c6,
+#app-mount .gifFavoriteButton__2dc39,
+#app-mount .categoryFadeBlurple__2dc39 {
+  border-radius: var(--fm-radius-sm) !important;
+  overflow: hidden !important;
+}
+
+#app-mount .result__2dc39:hover,
+#app-mount .result_e3c1c6:hover {
+  box-shadow: 0 0 14px rgba(var(--fm-main-rgb), 0.40) !important;
+  outline: 1px solid rgba(var(--fm-main-rgb), 0.55) !important;
+}

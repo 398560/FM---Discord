@@ -1,0 +1,47 @@
+/**
+ * Discord vars bridge
+ * Mapeia variaveis semanticas do Discord para a identidade FM.
+ */
+
+[data-popout-root],
+.theme-dark,
+.theme-light,
+.visual-refresh.theme-dark,
+.visual-refresh.theme-light,
+.visual-refresh .theme-dark,
+.visual-refresh .theme-light {
+  --bg-brand: rgb(var(--fm-main-rgb));
+  --background-brand: rgb(var(--fm-main-rgb));
+  --text-brand: rgb(var(--fm-main-rgb));
+  --text-link: var(--fm-muted-color);
+  --focus-primary: rgb(var(--fm-main-rgb));
+  --control-brand-foreground: rgb(var(--fm-main-rgb));
+  --control-brand-foreground-new: rgb(var(--fm-main-rgb));
+  --button-filled-brand-background: rgb(var(--fm-main-rgb));
+  --button-filled-brand-background-hover: rgb(var(--fm-main-rgb));
+  --button-filled-brand-background-active: rgb(var(--fm-secondary-rgb));
+  --button-outline-brand-text: rgb(var(--fm-main-rgb));
+  --button-outline-brand-border: rgba(var(--fm-main-rgb), 0.24);
+  --button-outline-brand-background-active: rgba(var(--fm-main-rgb), 0.10);
+  --mention-background: rgba(var(--fm-main-rgb), 0.22);
+  --mention-foreground: var(--fm-text-color);
+  --background-message-highlight: rgba(var(--fm-main-rgb), 0.10);
+  --background-message-hover: rgba(var(--fm-main-rgb), 0.06);
+  --background-floating: rgba(8, 3, 6, 0.92);
+  --background-surface-high: rgba(24, 10, 16, 0.78);
+  --background-surface-higher: rgba(10, 4, 8, 0.92);
+  --background-base-low: rgba(24, 10, 16, 0.70);
+  --background-base-lower: rgba(20, 8, 14, 0.46);
+  --card-background-default: rgba(10, 4, 8, 0.34);
+  --scrollbar-thin-thumb: rgba(var(--fm-main-rgb), 0.42);
+  --scrollbar-auto-thumb: rgba(var(--fm-main-rgb), 0.42);
+  --button-danger-background: rgba(235, 66, 92, 0.95);
+  --button-danger-background-hover: rgba(235, 66, 92, 0.72);
+  --status-danger: rgb(235, 66, 92);
+  --status-positive: rgb(88, 221, 144);
+  --status-warning: rgb(250, 166, 26);
+  --brand-experiment: rgb(var(--fm-main-rgb));
+  --brand-experiment-15a: rgba(var(--fm-main-rgb), 0.15);
+  --brand-experiment-25a: rgba(var(--fm-main-rgb), 0.25);
+  --brand-experiment-35a: rgba(var(--fm-main-rgb), 0.35);
+}

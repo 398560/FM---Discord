@@ -1,0 +1,44 @@
+/**
+ * Members
+ * Userlist, hover por status, grupos e estados selecionados.
+ */
+
+#app-mount .member_c8ffbb,
+#app-mount .members_c8ffbb [class*="member_"],
+#app-mount .container_c8ffbb [class*="member_"],
+#app-mount .members_c8ffbb [class*="layout_"],
+#app-mount .container_c8ffbb [class*="layout_"] {
+  background: transparent !important;
+  border-top: 1px solid transparent !important;
+  border-right: 1px solid transparent !important;
+  border-bottom: 1px solid transparent !important;
+  border-left: 3px solid transparent !important;
+  border-radius: var(--fm-radius-sm) !important;
+  box-shadow: none !important;
+}
+
+#app-mount .member_c8ffbb:hover,
+#app-mount .members_c8ffbb [class*="member_"]:hover,
+#app-mount .container_c8ffbb [class*="member_"]:hover,
+#app-mount .members_c8ffbb [class*="layout_"]:hover,
+#app-mount .container_c8ffbb [class*="layout_"]:hover {
+  background: rgba(var(--fm-main-rgb), 0.08) !important;
+  border-top-color: rgba(255, 255, 255, 0.08) !important;
+  border-right-color: rgba(255, 255, 255, 0.08) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+  border-left-color: rgba(var(--fm-main-rgb), 0.56) !important;
+}
+
+#app-mount .selected__91a9d,
+#app-mount .members_c8ffbb [class*="selected"],
+#app-mount .container_c8ffbb [class*="selected"] {
+  background: rgba(var(--fm-main-rgb), 0.12) !important;
+  border-left-color: rgba(var(--fm-main-rgb), 0.86) !important;
+}
+
+#app-mount .membersGroup_c8ffbb,
+#app-mount [class*="membersGroup_"] {
+  color: rgba(var(--fm-main-rgb), 0.92) !important;
+  letter-spacing: 0.04em;
+  text-shadow: 0 0 8px rgba(var(--fm-main-rgb), 0.12);
+}

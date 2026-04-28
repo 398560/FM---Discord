@@ -1,0 +1,31 @@
+/**
+ * Animated background
+ */
+
+@keyframes fm-bg-drift {
+  0% {
+    transform: translate3d(-2%, -1%, 0) scale(1.04);
+  }
+
+  50% {
+    transform: translate3d(2%, 1%, 0) scale(1.08);
+  }
+
+  100% {
+    transform: translate3d(-2%, -1%, 0) scale(1.04);
+  }
+}
+
+#app-mount .layers__160d8::before,
+#app-mount .layers__960e4::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(var(--fm-main-rgb), 0.10), transparent 26%),
+    radial-gradient(circle at 85% 80%, rgba(var(--fm-secondary-rgb), 0.08), transparent 30%);
+  animation: fm-bg-drift calc(18s * var(--fm-enable-animations)) ease-in-out infinite;
+  mix-blend-mode: screen;
+  opacity: 0.7;
+}

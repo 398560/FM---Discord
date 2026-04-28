@@ -1,0 +1,101 @@
+/**
+ * Messages
+ * Controla area de conversa, estados de mensagem, barras de unread e reacoes.
+ */
+
+#app-mount .message__5126c {
+  border-radius: var(--fm-radius-sm);
+  border: 1px solid transparent;
+  backdrop-filter: blur(2px);
+  transition: background-color 0.16s ease, box-shadow 0.16s ease;
+}
+
+#app-mount .message__5126c:hover {
+  background: linear-gradient(90deg, rgba(var(--fm-main-rgb), 0.08), transparent 76%);
+  border-color: rgba(var(--fm-main-rgb), 0.10);
+  box-shadow: inset 3px 0 0 rgba(var(--fm-main-rgb), 0.38);
+}
+
+#app-mount .mentioned__5126c,
+#app-mount .replying__5126c,
+#app-mount .ephemeral__5126c,
+#app-mount .message__5126c.selected__5126c {
+  background: linear-gradient(90deg, rgba(var(--fm-main-rgb), 0.18), rgba(var(--fm-secondary-rgb), 0.08));
+  border-color: rgba(var(--fm-main-rgb), 0.18);
+}
+
+#app-mount .mentioned__5126c::before,
+#app-mount .ephemeral__5126c::before {
+  background-color: rgba(var(--fm-main-rgb), 0.82) !important;
+}
+
+#app-mount .message__5126c.selected__5126c {
+  animation: fm-soft-pulse 2.6s ease-in-out infinite;
+}
+
+#app-mount .username_c19a55,
+#app-mount .headerText_aa8da2,
+#app-mount .title__9293f {
+  color: var(--fm-text-strong) !important;
+}
+
+#app-mount .timestamp_c19a55,
+#app-mount .subtext__972a0,
+#app-mount .activityText__20a53 {
+  color: var(--fm-text-faint) !important;
+}
+
+#app-mount .reaction__23977,
+#app-mount .reaction_f8896c,
+#app-mount .pill_a2c9e8 {
+  border-radius: var(--fm-radius-sm);
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--fm-border-soft);
+  transition:
+    transform var(--fm-transition),
+    border-color var(--fm-transition),
+    background-color var(--fm-transition),
+    box-shadow var(--fm-transition);
+}
+
+#app-mount .reaction__23977:hover,
+#app-mount .reaction_f8896c:hover,
+#app-mount .pill_a2c9e8:hover {
+  background-color: rgba(var(--fm-main-rgb), 0.14);
+  border-color: var(--fm-border);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(var(--fm-main-rgb), 0.14);
+}
+
+#app-mount .reaction__23977.reactionMe__23977,
+#app-mount .pill_a2c9e8.selected_a2c9e8 {
+  background: linear-gradient(135deg, rgba(var(--fm-main-rgb), 0.32), rgba(var(--fm-secondary-rgb), 0.16));
+  border-color: rgba(var(--fm-main-rgb), 0.48);
+}
+
+#app-mount .reactionCount__23977,
+#app-mount .reactionCount_f8896c {
+  color: white !important;
+}
+
+#app-mount .newMessagesBar__0f481,
+#app-mount .barBase__0f481,
+#app-mount .jumpToPresentBar__0f481 {
+  background: linear-gradient(135deg, rgb(var(--fm-main-rgb)), rgb(var(--fm-secondary-rgb))) !important;
+  border-radius: 14px;
+  box-shadow: var(--fm-shadow-card);
+  backdrop-filter: blur(22px) saturate(145%);
+}
+
+#app-mount .isUnread__908e2,
+#app-mount .content__908e2,
+#app-mount .endCap__908e2 {
+  border-color: rgba(var(--fm-main-rgb), 0.34) !important;
+}
+
+#app-mount .content__908e2,
+#app-mount .endCap__908e2 {
+  background: rgba(0, 0, 0, 0.18) !important;
+  color: rgba(var(--fm-main-rgb), 0.96) !important;
+  backdrop-filter: blur(24px);
+}

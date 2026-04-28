@@ -1,0 +1,21 @@
+/**
+ * Animated glow
+ */
+
+@keyframes fm-glow-breathe {
+  0%,
+  100% {
+    box-shadow: 0 0 0 rgba(var(--fm-main-rgb), 0);
+  }
+
+  50% {
+    box-shadow: 0 0 22px rgba(var(--fm-main-rgb), calc(var(--fm-glow-strength-effective) * 1.2));
+  }
+}
+
+#app-mount .lookFilled__201d5.colorBrand__201d5,
+#app-mount .numberBadge__2b1f5,
+#app-mount .textBadge__2b1f5,
+#app-mount .wrapper__6e9f8.selected__6e9f8 .childWrapper__6e9f8 {
+  animation: fm-glow-breathe calc(2.6s * var(--fm-enable-animations)) ease-in-out infinite;
+}

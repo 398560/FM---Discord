@@ -1,0 +1,37 @@
+/* Scrollbars
+ * Barra de rolagem minimalista para combinar com layouts glass.
+ */
+
+#app-mount .auto_d125d2::-webkit-scrollbar,
+#app-mount .auto__99f8c::-webkit-scrollbar,
+#app-mount .thin_d125d2::-webkit-scrollbar,
+#app-mount .thin__99f8c::-webkit-scrollbar,
+#app-mount ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+#app-mount .auto_d125d2::-webkit-scrollbar-thumb,
+#app-mount .auto__99f8c::-webkit-scrollbar-thumb,
+#app-mount .thin_d125d2::-webkit-scrollbar-thumb,
+#app-mount .thin__99f8c::-webkit-scrollbar-thumb,
+#app-mount ::-webkit-scrollbar-thumb {
+  background-color: rgba(var(--fm-main-rgb), 0.42);
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+#app-mount .auto_d125d2::-webkit-scrollbar-track,
+#app-mount .auto__99f8c::-webkit-scrollbar-track,
+#app-mount .thin_d125d2::-webkit-scrollbar-track,
+#app-mount .thin__99f8c::-webkit-scrollbar-track,
+#app-mount ::-webkit-scrollbar-track,
+#app-mount ::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+#app-mount .scrollbarGhostHairline__506b3,
+#app-mount .scrollbar__506b3 {
+  background-color: rgba(0, 0, 0, 0.20);
+}

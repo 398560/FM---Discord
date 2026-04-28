@@ -1,0 +1,9 @@
+/**
+ * Minimal motion preset
+ */
+
+:root {
+  --fm-transition: calc(90ms * var(--fm-enable-animations)) linear;
+  --fm-motion-fast: calc(0.08s * var(--fm-enable-animations));
+  --fm-motion-mid: calc(0.12s * var(--fm-enable-animations));
+}

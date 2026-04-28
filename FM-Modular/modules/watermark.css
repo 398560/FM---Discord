@@ -1,0 +1,63 @@
+/* Watermark
+ * Marca d'agua, logo flutuante e texto decorativo no chat.
+ * Pode ser desligado por variáveis sem mexer na estrutura.
+ */
+
+#app-mount .app__160d8::after,
+#app-mount .appMount_ea7e65::after {
+  content: var(--fm-watermark-text);
+  display: var(--fm-watermark-display);
+  position: fixed;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999999;
+  pointer-events: none;
+  padding: 3px 14px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.14);
+  border: 1px solid rgba(var(--fm-main-rgb), 0.16);
+  color: rgba(var(--fm-muted-rgb), 0.34);
+  text-shadow: 0 0 8px rgba(var(--fm-main-rgb), 0.25);
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: 2px;
+}
+
+#app-mount .layers__160d8::after,
+#app-mount .layers__960e4::after {
+  content: "FM";
+  display: var(--fm-logo-display);
+  position: fixed;
+  right: 34px;
+  bottom: 36px;
+  z-index: 999999;
+  pointer-events: none;
+  color: rgba(var(--fm-main-rgb), 0.17);
+  text-shadow: 0 0 14px rgba(var(--fm-main-rgb), 0.30);
+  font-size: 50px;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+
+#app-mount .visual-refresh .chatContent_f75fb0::before {
+  content: var(--fm-jp-text);
+  display: var(--fm-jp-display);
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+  pointer-events: none;
+  color: rgba(var(--fm-main-rgb), 0.045);
+  text-shadow: 0 0 10px rgba(var(--fm-main-rgb), 0.15);
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 6px;
+}
+
+#app-mount .visual-refresh .chatContent_f75fb0 > * {
+  position: relative;
+  z-index: 1;
+}

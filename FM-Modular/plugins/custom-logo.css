@@ -1,0 +1,28 @@
+/**
+ * Custom logo
+ */
+
+#app-mount [data-list-item-id="guildsnav___home"] [class*="childWrapper_"],
+#app-mount .tutorialContainer__1f388 .childWrapper__6e9f8 {
+  background-image: var(--fm-logo-url), var(--fm-gradient-main) !important;
+  background-position: center, center !important;
+  background-repeat: no-repeat, no-repeat !important;
+  background-size: var(--fm-logo-size), cover !important;
+  box-shadow: var(--fm-logo-glow);
+  transition:
+    transform var(--fm-transition),
+    box-shadow var(--fm-transition),
+    background-image var(--fm-transition);
+}
+
+#app-mount [data-list-item-id="guildsnav___home"] svg,
+#app-mount .tutorialContainer__1f388 svg {
+  opacity: 0;
+}
+
+#app-mount [data-list-item-id="guildsnav___home"]:hover [class*="childWrapper_"],
+#app-mount .tutorialContainer__1f388:hover .childWrapper__6e9f8 {
+  background-image: var(--fm-logo-hover-url), var(--fm-gradient-strong) !important;
+  transform: scale(1.04);
+  box-shadow: 0 0 24px rgba(var(--fm-main-rgb), 0.52);
+}

@@ -1,0 +1,32 @@
+/**
+ * Background
+ * Aplica wallpaper, overlay e atmosfera radial no app inteiro.
+ */
+
+html,
+body,
+#app-mount,
+.app__160d8,
+.appMount_ea7e65,
+.bg__960e4,
+.bg__12180 {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, var(--fm-bg-overlay-top)),
+      rgba(0, 0, 0, var(--fm-bg-overlay-bottom))
+    ),
+    var(--fm-bg) center / cover no-repeat fixed !important;
+  background-color: rgb(12, 5, 10) !important;
+}
+
+.layers__160d8,
+.layers__960e4,
+.layer__960e4,
+.base_c48ade,
+.content_c48ade,
+.page_c48ade {
+  background:
+    radial-gradient(circle at 20% 0%, rgba(var(--fm-main-rgb), 0.07), transparent 35%),
+    radial-gradient(circle at 80% 90%, rgba(var(--fm-secondary-rgb), 0.06), transparent 40%),
+    rgba(18, 7, 12, 0.16) !important;
+}

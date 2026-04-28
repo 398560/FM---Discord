@@ -1,0 +1,21 @@
+/**
+ * Ripple click
+ */
+
+#app-mount button,
+#app-mount [role="button"],
+#app-mount .interactive__972a0,
+#app-mount .link__2ea32,
+#app-mount .childWrapper__6e9f8 {
+  position: relative;
+  overflow: hidden;
+}
+
+#app-mount button:active,
+#app-mount [role="button"]:active,
+#app-mount .interactive__972a0:active,
+#app-mount .link__2ea32:active,
+#app-mount .childWrapper__6e9f8:active {
+  background-image:
+    radial-gradient(circle, rgba(var(--fm-main-rgb), 0.28) 0%, rgba(var(--fm-main-rgb), 0) 58%) !important;
+}

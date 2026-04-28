@@ -1,0 +1,32 @@
+/**
+ * Core reset
+ * Normaliza a base e remove fundos padrao que atrapalham temas glass.
+ */
+
+html {
+  zoom: var(--fm-zoom);
+  transition: all 0.2s ease;
+}
+
+body,
+#app-mount,
+.app__160d8,
+.appMount_ea7e65,
+.layer__960e4 {
+  background-color: transparent;
+}
+
+img,
+video,
+canvas {
+  filter: none !important;
+}
+
+::selection {
+  background: rgba(var(--fm-main-rgb), 0.35);
+  color: white;
+}
+
+*::-webkit-input-placeholder {
+  color: rgba(var(--fm-text-rgb), 0.65) !important;
+}

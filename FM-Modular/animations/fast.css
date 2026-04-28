@@ -1,0 +1,9 @@
+/**
+ * Fast motion preset
+ */
+
+:root {
+  --fm-transition: calc(140ms * var(--fm-enable-animations)) cubic-bezier(0.3, 0.7, 0.2, 1);
+  --fm-motion-fast: calc(0.14s * var(--fm-enable-animations));
+  --fm-motion-mid: calc(0.22s * var(--fm-enable-animations));
+}

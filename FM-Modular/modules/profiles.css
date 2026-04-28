@@ -1,0 +1,60 @@
+/**
+ * Profiles
+ * User popouts, profile modals, avatares e roles.
+ */
+
+#app-mount .outer_c0bea0,
+#app-mount .userProfileOuter_c0bea0,
+#app-mount .userProfileOuterThemed_c0bea0.userProfileOuter_c0bea0 {
+  background: var(--fm-gradient-soft) !important;
+  border: 1px solid var(--fm-border-hot) !important;
+  border-radius: var(--fm-radius-lg) !important;
+  box-shadow: var(--fm-shadow-strong) !important;
+  backdrop-filter: blur(var(--fm-blur-strong-effective)) saturate(145%);
+}
+
+#app-mount .overlay_c0bea0,
+#app-mount .fullSizeOverlayBackground_c0bea0,
+#app-mount .biteSizeOverlayBackground_c0bea0 {
+  background: rgba(0, 0, 0, 0.22) !important;
+  border: 1px solid rgba(var(--fm-main-rgb), 0.18) !important;
+  border-radius: var(--fm-radius-md) !important;
+}
+
+#app-mount .userProfileInner_c0bea0::before {
+  background-color: transparent;
+}
+
+#app-mount .avatarWrapper_f89da9 foreignObject,
+#app-mount .avatarHint_f89da9 foreignObject,
+#app-mount .avatar_ec3b75 foreignObject,
+#app-mount .wrapper__44b0c,
+#app-mount .avatar__44b0c {
+  mask: none !important;
+  border-radius: 9px !important;
+}
+
+#app-mount .avatar__44b0c,
+#app-mount .avatar__991e2,
+#app-mount .avatar_c19a55,
+#app-mount .avatar_ec3b75 {
+  transition:
+    transform var(--fm-transition),
+    filter var(--fm-transition),
+    box-shadow var(--fm-transition);
+}
+
+#app-mount .avatar__44b0c:hover,
+#app-mount .avatar__991e2:hover,
+#app-mount .avatar_c19a55:hover,
+#app-mount .avatar_ec3b75:hover {
+  transform: scale(1.035);
+  box-shadow: 0 0 0 2px rgba(var(--fm-main-rgb), 0.45), 0 0 16px rgba(var(--fm-main-rgb), 0.18);
+}
+
+#app-mount .role__48c1c,
+#app-mount .role_dfa8b6 {
+  background: rgba(var(--fm-main-rgb), 0.20) !important;
+  border: 1px solid rgba(var(--fm-main-rgb), 0.28) !important;
+  color: white;
+}

@@ -1,0 +1,117 @@
+/**
+ * Layout glass
+ * Cria a espinha dorsal translúcida do Discord com foco em Visual Refresh.
+ */
+
+#app-mount .layers__160d8,
+#app-mount .layers__960e4 {
+  margin: calc(var(--fm-app-margin) * 0.5) var(--fm-app-margin) var(--fm-app-margin);
+  border-radius: var(--fm-app-radius);
+  overflow: hidden;
+}
+
+.visual-refresh .bg__960e4,
+.visual-refresh .container__9293f.themed__9293f,
+#app-mount .chat_f75fb0,
+.visual-refresh .chat_f75fb0,
+.visual-refresh .chatContent_f75fb0,
+.visual-refresh .messagesWrapper__36d07,
+.visual-refresh .scrollerInner__36d07,
+.members_c8ffbb,
+.members_c8ffbb > div,
+.container_c8ffbb,
+.theme-dark .container__2637a,
+.visual-refresh .sidebar_c48ade,
+.theme-dark .scroller_ef3116,
+.visual-refresh .wrapper_ef3116,
+.visual-refresh .privateChannels__35e86,
+.visual-refresh .scroller__99e7c,
+.visual-refresh .tabBody__133bf,
+.visual-refresh .nowPlayingColumn__133bf,
+.visual-refresh .container__133bf,
+.applicationStore_f07d62,
+.homeWrapper__0920e,
+.shop__6db1d,
+.shopScroll_e77fa3,
+.pageWrapper_e77fa3,
+.scroller__244e5,
+.content__5e434,
+.page__5e434 {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+#app-mount .sidebarList__5e434,
+#app-mount .container__2637a,
+#app-mount .privateChannels__35e86,
+#app-mount .wrapper_ef3116,
+#app-mount .members_c8ffbb,
+#app-mount .container_c8ffbb,
+#app-mount .chatContent_f75fb0,
+#app-mount .container__37e49,
+#app-mount .panel__5dec7,
+#app-mount .activityPanel__5e434,
+#app-mount .container_e131a9,
+#app-mount #vc-spotify-player {
+  backdrop-filter: blur(var(--fm-blur-strong-effective)) saturate(145%);
+}
+
+#app-mount .sidebarList__5e434,
+#app-mount .container__2637a,
+#app-mount .privateChannels__35e86,
+#app-mount .sidebar_c48ade {
+  background: var(--fm-gradient-sidebar) !important;
+  border-right: 1px solid var(--fm-border-soft) !important;
+  box-shadow: var(--fm-shadow-card);
+}
+
+#app-mount .wrapper_ef3116,
+#app-mount .scroller_ef3116 {
+  background: var(--fm-gradient-panel) !important;
+  border-right: 1px solid var(--fm-border-soft) !important;
+  box-shadow: var(--fm-shadow-card);
+}
+
+#app-mount .chat_f75fb0,
+#app-mount .chatContent_f75fb0 {
+  background:
+    linear-gradient(180deg, rgba(14, 5, 9, 0.28), rgba(14, 5, 9, 0.18)) !important;
+}
+
+#app-mount .members_c8ffbb,
+#app-mount .container_c8ffbb {
+  background:
+    linear-gradient(180deg, rgba(24, 10, 16, 0.32), rgba(10, 4, 8, 0.52)) !important;
+  border-left: 1px solid rgba(var(--fm-main-rgb), 0.14) !important;
+}
+
+#app-mount .container__37e49,
+#app-mount .panel__5dec7,
+#app-mount .activityPanel__5e434,
+#app-mount .container_e131a9,
+#app-mount #vc-spotify-player {
+  background:
+    linear-gradient(180deg, rgba(35, 13, 21, 0.78), rgba(14, 5, 10, 0.88)) !important;
+  border: 1px solid rgba(var(--fm-main-rgb), 0.24) !important;
+  border-radius: var(--fm-radius-md) !important;
+  box-shadow: var(--fm-shadow-card) !important;
+}
+
+#app-mount .container__9293f.themed__9293f,
+#app-mount .header_c6bf1b,
+#app-mount .header_f37cb1,
+#app-mount .titleContainer_e29cd7 {
+  background: rgba(0, 0, 0, 0.20) !important;
+  border-bottom: 1px solid var(--fm-border-soft);
+  backdrop-filter: blur(calc(var(--fm-blur-effective) * 1.1)) saturate(140%);
+}
+
+#app-mount .platform-win .sidebar__5e434,
+#app-mount .chat_f75fb0,
+#app-mount .container__133bf,
+#app-mount .main_c08b38,
+#app-mount .applicationStore_f07d62,
+#app-mount .shop__6db1d,
+#app-mount .homeWrapper__0920e {
+  border-radius: 14px;
+}

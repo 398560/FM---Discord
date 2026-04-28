@@ -1,0 +1,23 @@
+/**
+ * Parallax
+ */
+
+#app-mount .layers__160d8,
+#app-mount .layers__960e4 {
+  perspective: 1200px;
+}
+
+#app-mount .chatContent_f75fb0,
+#app-mount .members_c8ffbb,
+#app-mount .container__2637a,
+#app-mount .wrapper_ef3116 {
+  transform: translateZ(0);
+  transition: transform calc(0.4s * var(--fm-enable-animations)) ease;
+}
+
+#app-mount .chatContent_f75fb0:hover,
+#app-mount .members_c8ffbb:hover,
+#app-mount .container__2637a:hover,
+#app-mount .wrapper_ef3116:hover {
+  transform: translateY(-1px) translateZ(4px);
+}

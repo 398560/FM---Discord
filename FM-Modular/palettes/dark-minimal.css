@@ -1,0 +1,28 @@
+/* Palette: Dark Minimal
+ * Quase monocromatica, limpa e discreta para um glass mais profissional.
+ */
+
+:root {
+  --fm-main-color: #b5bdc9;
+  --fm-secondary-color: #7a8596;
+  --fm-main-rgb: 181, 189, 201;
+  --fm-secondary-rgb: 122, 133, 150;
+
+  --fm-text-color: #f4f6f8;
+  --fm-text-rgb: 244, 246, 248;
+  --fm-muted-color: #c8ced8;
+  --fm-muted-rgb: 200, 206, 216;
+
+  --fm-sidebar-opacity: 0.34;
+  --fm-chat-opacity: 0.04;
+  --fm-panel-opacity: 0.28;
+  --fm-menu-opacity: 0.86;
+  --fm-glow-strength: 0.10;
+  --fm-border-strength: 0.18;
+
+  --fm-bg: linear-gradient(180deg, #111318, #0a0c10);
+  --fm-gif-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+
+  --fm-watermark-text: "ＦＭ • DARK CLEAN";
+  --fm-jp-text: "黒 • 静";
+}

@@ -1,0 +1,19 @@
+/**
+ * Performance mode
+ */
+
+:root {
+  --fm-enable-glow: 0;
+  --fm-enable-animations: 0;
+  --fm-enable-blur: 0;
+  --fm-glow-strength: 0;
+  --fm-blur: 0px;
+  --fm-blur-strong: 0px;
+  --fm-shadow-card: 0 6px 16px rgba(0, 0, 0, 0.16);
+  --fm-shadow-strong: 0 10px 24px rgba(0, 0, 0, 0.22);
+}
+
+#app-mount * {
+  animation-duration: 0s !important;
+  transition-duration: 0s !important;
+}

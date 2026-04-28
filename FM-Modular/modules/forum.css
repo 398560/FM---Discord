@@ -1,0 +1,61 @@
+/* Forum and cards
+ * Cartões translúcidos para fóruns, activity cards, loja, discovery e listas modernas.
+ */
+
+#app-mount .visual-refresh .nowPlayingColumn__133bf [class*="itemCard_"],
+#app-mount .visual-refresh .nowPlayingColumn__133bf [class*="outer_"],
+#app-mount .visual-refresh .container__133bf [class*="itemCard_"],
+#app-mount .visual-refresh .container__133bf [class*="card_"],
+#app-mount .visual-refresh .tabBody__133bf [class*="itemCard_"],
+#app-mount .visual-refresh .tabBody__133bf [class*="card_"],
+#app-mount .theme-dark [class*="mainCard_"],
+#app-mount .theme-dark [class*="forumPost_"],
+#app-mount .theme-dark [class*="post_"][class*="card_"],
+#app-mount .theme-dark [class*="container_"][class*="forumPost_"],
+#app-mount .theme-dark [class*="container_"][class*="post_"] {
+  background: rgba(var(--fm-main-rgb), 0.07);
+  border: 1px solid rgba(var(--fm-main-rgb), 0.14);
+  box-shadow: none;
+  backdrop-filter: blur(6px) saturate(118%);
+  transition:
+    transform var(--fm-transition),
+    border-color var(--fm-transition),
+    box-shadow var(--fm-transition),
+    background-color var(--fm-transition);
+}
+
+#app-mount .visual-refresh .nowPlayingColumn__133bf [class*="itemCard_"]:hover,
+#app-mount .visual-refresh .nowPlayingColumn__133bf [class*="outer_"]:hover,
+#app-mount .visual-refresh .container__133bf [class*="itemCard_"]:hover,
+#app-mount .visual-refresh .container__133bf [class*="card_"]:hover,
+#app-mount .visual-refresh .tabBody__133bf [class*="itemCard_"]:hover,
+#app-mount .visual-refresh .tabBody__133bf [class*="card_"]:hover,
+#app-mount .theme-dark [class*="mainCard_"]:hover,
+#app-mount .theme-dark [class*="forumPost_"]:hover,
+#app-mount .theme-dark [class*="post_"][class*="card_"]:hover,
+#app-mount .theme-dark [class*="container_"][class*="forumPost_"]:hover,
+#app-mount .theme-dark [class*="container_"][class*="post_"]:hover {
+  background: rgba(var(--fm-main-rgb), 0.10);
+  border-color: rgba(var(--fm-main-rgb), 0.22);
+  transform: translateY(-2px);
+  box-shadow: var(--fm-shadow-card);
+}
+
+#app-mount .theme-dark [class*="newPostsButton_"],
+#app-mount .theme-dark [class*="sortDropdown_"],
+#app-mount .theme-dark [class*="tagsButton_"],
+#app-mount .theme-dark [class*="browseTagsButton_"],
+#app-mount .theme-dark [class*="searchBar_"][class*="forum"],
+#app-mount .theme-dark [class*="searchBox_"][class*="forum"],
+#app-mount .theme-dark [class*="controls_"][class*="forum"] {
+  background: rgba(var(--fm-main-rgb), 0.06);
+  border: 1px solid rgba(var(--fm-main-rgb), 0.14);
+  box-shadow: none;
+}
+
+#app-mount .theme-dark [class*="tagsContainer_"],
+#app-mount .theme-dark [class*="section_"][class*="forum"],
+#app-mount .theme-dark [class*="matchingPosts_"],
+#app-mount .theme-dark [class*="guidelines_"] {
+  background: transparent;
+}

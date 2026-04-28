@@ -1,0 +1,95 @@
+/**
+ * Core variables
+ * Define as variaveis globais reutilizadas por todos os modulos.
+ */
+
+:root {
+  --fm-bg: url("https://files.catbox.moe/r1nz7t.jpg");
+  --fm-gif-bg: url("https://files.catbox.moe/uzhlt2.jpg");
+
+  --fm-main-color: #b248ff;
+  --fm-secondary-color: #5a00b4;
+  --fm-main-rgb: 178, 72, 255;
+  --fm-secondary-rgb: 90, 0, 180;
+
+  --fm-text-color: #f5ebff;
+  --fm-text-rgb: 245, 235, 255;
+  --fm-muted-color: #d2b4ff;
+  --fm-muted-rgb: 210, 180, 255;
+
+  --fm-sidebar-opacity: 0.40;
+  --fm-chat-opacity: 0.03;
+  --fm-panel-opacity: 0.26;
+  --fm-menu-opacity: 0.88;
+  --fm-card-opacity: 0.60;
+  --fm-popout-opacity: 0.84;
+
+  --fm-bg-overlay-top: 0.14;
+  --fm-bg-overlay-bottom: 0.28;
+
+  --fm-glow-strength: 0.22;
+  --fm-border-strength: 0.36;
+
+  --fm-blur: 10px;
+  --fm-blur-strong: 18px;
+
+  --fm-radius-sm: 7px;
+  --fm-radius-md: 12px;
+  --fm-radius-lg: 16px;
+  --fm-radius-xl: 22px;
+
+  --fm-zoom: 1;
+  --fm-transition: calc(220ms * var(--fm-enable-animations)) cubic-bezier(0.2, 0.8, 0.2, 1);
+  --fm-motion-fast: calc(0.22s * var(--fm-enable-animations));
+  --fm-motion-mid: calc(0.34s * var(--fm-enable-animations));
+  --fm-blur-effective: calc(var(--fm-blur) * var(--fm-enable-blur));
+  --fm-blur-strong-effective: calc(var(--fm-blur-strong) * var(--fm-enable-blur));
+  --fm-glow-strength-effective: calc(var(--fm-glow-strength) * var(--fm-enable-glow));
+
+  --fm-app-margin: 18px;
+  --fm-app-radius: 18px;
+
+  --fm-surface-1: rgba(18, 7, 12, 0.18);
+  --fm-surface-2: rgba(20, 8, 14, 0.46);
+  --fm-surface-3: rgba(28, 10, 18, 0.72);
+  --fm-surface-4: rgba(10, 4, 8, 0.92);
+
+  --fm-text-strong: rgba(var(--fm-text-rgb), 0.97);
+  --fm-text-soft: rgba(var(--fm-text-rgb), 0.84);
+  --fm-text-faint: rgba(var(--fm-muted-rgb), 0.70);
+
+  --fm-accent-soft: rgba(var(--fm-main-rgb), 0.12);
+  --fm-accent-mid: rgba(var(--fm-main-rgb), 0.24);
+  --fm-accent-strong: rgba(var(--fm-main-rgb), 0.48);
+  --fm-accent-secondary: rgba(var(--fm-secondary-rgb), 0.28);
+
+  --fm-gradient-main: linear-gradient(135deg, rgba(var(--fm-main-rgb), 0.34), rgba(var(--fm-secondary-rgb), 0.16));
+  --fm-gradient-strong: linear-gradient(135deg, rgba(var(--fm-main-rgb), 0.68), rgba(var(--fm-secondary-rgb), 0.34));
+  --fm-gradient-soft: linear-gradient(180deg, rgba(28, 10, 18, var(--fm-menu-opacity)), rgba(10, 4, 8, 0.92));
+  --fm-gradient-panel: linear-gradient(180deg, rgba(34, 13, 22, 0.58), rgba(11, 4, 8, 0.76));
+  --fm-gradient-sidebar: linear-gradient(180deg, rgba(26, 10, 17, 0.56), rgba(10, 4, 8, 0.72));
+  --fm-gradient-input: linear-gradient(180deg, rgba(33, 12, 21, 0.74), rgba(14, 5, 10, 0.84));
+  --fm-gradient-shine: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.16) 48%, transparent 100%);
+
+  --fm-border: rgba(var(--fm-main-rgb), var(--fm-border-strength));
+  --fm-border-soft: rgba(var(--fm-main-rgb), calc(var(--fm-border-strength) * 0.60));
+  --fm-border-hot: rgba(var(--fm-main-rgb), calc(var(--fm-border-strength) * 1.55));
+  --fm-glass-border: rgba(255, 255, 255, 0.08);
+
+  --fm-glow-soft: 0 0 10px rgba(var(--fm-main-rgb), calc(var(--fm-glow-strength-effective) * 0.65));
+  --fm-glow-mid: 0 0 16px rgba(var(--fm-main-rgb), var(--fm-glow-strength-effective));
+  --fm-shadow-card: 0 14px 32px rgba(0, 0, 0, 0.28), 0 0 18px rgba(var(--fm-main-rgb), calc(var(--fm-glow-strength-effective) * 0.55));
+  --fm-shadow-strong: 0 18px 40px rgba(0, 0, 0, 0.34), 0 0 24px rgba(var(--fm-main-rgb), calc(var(--fm-glow-strength-effective) * 1.05));
+  --fm-shadow-inset: inset 0 1px 0 rgba(255, 255, 255, 0.04), inset 0 0 0 1px rgba(var(--fm-main-rgb), 0.06);
+
+  --fm-watermark-display: block;
+  --fm-logo-display: block;
+  --fm-jp-display: block;
+  --fm-watermark-text: "FM • Modular Glass";
+  --fm-jp-text: "ガラス • ネオン";
+
+  --fm-logo-url: none;
+  --fm-logo-hover-url: var(--fm-logo-url);
+  --fm-logo-size: 24px;
+  --fm-logo-glow: 0 0 18px rgba(var(--fm-main-rgb), 0.42);
+}

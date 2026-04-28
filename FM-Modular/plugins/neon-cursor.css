@@ -1,0 +1,18 @@
+/**
+ * Neon cursor
+ */
+
+html,
+body,
+#app-mount {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'%3E%3Cpath fill='%23ff4fd8' d='M4 3l8 19 2-7 7-2z'/%3E%3Cpath fill='%23ffffff' d='M4 3l8 19 2-7 7-2z' opacity='.28'/%3E%3C/svg%3E") 3 3, auto;
+}
+
+a,
+button,
+[role="button"],
+.interactive__972a0,
+.link__2ea32,
+.childWrapper__6e9f8 {
+  cursor: pointer;
+}

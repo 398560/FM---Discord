@@ -1,0 +1,29 @@
+/* Palette: Cyberpunk
+ * Magenta + cyan para composição mais elétrica e noturna.
+ */
+
+:root {
+  --fm-main-color: #ff4fd8;
+  --fm-secondary-color: #1de5ff;
+  --fm-main-rgb: 255, 79, 216;
+  --fm-secondary-rgb: 29, 229, 255;
+
+  --fm-text-color: #fff9ff;
+  --fm-text-rgb: 255, 249, 255;
+  --fm-muted-color: #ffd3f5;
+  --fm-muted-rgb: 255, 211, 245;
+
+  --fm-sidebar-opacity: 0.42;
+  --fm-chat-opacity: 0.04;
+  --fm-panel-opacity: 0.34;
+  --fm-menu-opacity: 0.90;
+  --fm-glow-strength: 0.22;
+  --fm-border-strength: 0.30;
+
+  --fm-bg: url("https://images.unsplash.com/photo-1520034475321-cbe63696469a?auto=format&fit=crop&w=1600&q=80");
+  --fm-gif-bg: radial-gradient(circle at top, rgba(255, 79, 216, 0.18), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(29, 229, 255, 0.14), transparent 40%);
+
+  --fm-watermark-text: "ＦＭ • CYBERPUNK";
+  --fm-jp-text: "ネオン • 電脳";
+}

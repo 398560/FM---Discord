@@ -1,0 +1,35 @@
+/**
+ * @name FM / Trojan Purple
+ * @author Plague Doctor
+ * @description Modular purple neon glass preset for Discord
+ * @version 3.0.0
+ */
+
+@import url("../core/variables.css");
+@import url("../features.css");
+@import url("../palettes/purple.css");
+@import url("../animations/dramatic.css");
+@import url("../core/reset.css");
+@import url("../core/discord-vars.css");
+@import url("../core/background.css");
+@import url("../core/layout-glass.css");
+
+@import url("../modules/animations.css");
+@import url("../modules/glow.css");
+@import url("../modules/server-list.css");
+@import url("../modules/channels.css");
+@import url("../modules/messages.css");
+@import url("../modules/input-area.css");
+@import url("../modules/buttons.css");
+@import url("../modules/popouts.css");
+@import url("../modules/profiles.css");
+@import url("../modules/emoji-picker.css");
+@import url("../modules/members.css");
+@import url("../modules/badges.css");
+@import url("../modules/forum.css");
+@import url("../modules/codeblocks.css");
+@import url("../modules/tooltips.css");
+@import url("../modules/scrollbars.css");
+@import url("../modules/watermark.css");
+@import url("../modules/fixes.css");
+@import url("../overrides.css");

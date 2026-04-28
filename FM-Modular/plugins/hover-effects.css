@@ -1,0 +1,15 @@
+/**
+ * Advanced hover effects
+ */
+
+#app-mount .interactive__972a0:hover,
+#app-mount .link__2ea32:hover,
+#app-mount .layout__20a53:hover,
+#app-mount .member_c8ffbb:hover,
+#app-mount .members_c8ffbb [class*="member_"]:hover,
+#app-mount .container_c8ffbb [class*="member_"]:hover,
+#app-mount .lookFilled__201d5:hover,
+#app-mount .lookOutlined__201d5:hover {
+  transform: translateY(-1px) scale(1.01);
+  filter: saturate(1.08);
+}

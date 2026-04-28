@@ -1,0 +1,97 @@
+/* Buttons
+ * Botões principais, outlines, tabs e controles clicáveis do tema.
+ * Tudo depende das variáveis globais para reaproveitar em qualquer paleta.
+ */
+
+#app-mount .lookFilled__201d5.colorBrand__201d5,
+#app-mount .bd-button-filled.bd-button-color-brand,
+#app-mount .bd-addon-modal-footer .bd-button,
+#app-mount .button__201d5.colorBrand__201d5 {
+  background: linear-gradient(135deg, rgb(var(--fm-main-rgb)), rgb(var(--fm-secondary-rgb)));
+  border: 1px solid rgba(var(--fm-main-rgb), 0.55);
+  color: white;
+  box-shadow: 0 10px 22px rgba(var(--fm-main-rgb), 0.22);
+  transition:
+    transform var(--fm-transition),
+    filter var(--fm-transition),
+    box-shadow var(--fm-transition);
+}
+
+#app-mount .lookFilled__201d5.colorBrand__201d5:hover,
+#app-mount .bd-button-filled.bd-button-color-brand:hover,
+#app-mount .bd-addon-modal-footer .bd-button:hover,
+#app-mount .button__201d5.colorBrand__201d5:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+  box-shadow: 0 14px 28px rgba(var(--fm-main-rgb), 0.28);
+}
+
+#app-mount .lookOutlined__201d5.colorBrand__201d5,
+#app-mount .bd-button.bd-button-color-brand,
+#app-mount .button__201d5.lookOutlined__201d5.colorBrand__201d5 {
+  background: rgba(var(--fm-main-rgb), 0.08);
+  border-color: rgba(var(--fm-main-rgb), 0.26);
+  color: rgb(var(--fm-main-rgb));
+  transition:
+    background-color var(--fm-transition),
+    border-color var(--fm-transition),
+    transform var(--fm-transition);
+}
+
+#app-mount .lookOutlined__201d5.colorBrand__201d5:hover,
+#app-mount .bd-button.bd-button-color-brand:hover,
+#app-mount .button__201d5.lookOutlined__201d5.colorBrand__201d5:hover {
+  background: rgba(var(--fm-main-rgb), 0.13);
+  border-color: rgba(var(--fm-main-rgb), 0.44);
+  transform: translateY(-1px);
+}
+
+#app-mount .side_b3f026 .item_b3f026,
+#app-mount .tabBarItem_b9fccc,
+#app-mount [class*="topPill_"] [class*="item_"] {
+  border-radius: var(--fm-radius-md);
+  transition:
+    background-color var(--fm-transition),
+    box-shadow var(--fm-transition),
+    color var(--fm-transition),
+    transform var(--fm-transition);
+}
+
+#app-mount .side_b3f026 .item_b3f026:hover,
+#app-mount .tabBarItem_b9fccc:hover,
+#app-mount [class*="topPill_"] [class*="item_"]:hover {
+  background: rgba(var(--fm-main-rgb), 0.10);
+  transform: translateX(3px);
+}
+
+#app-mount .side_b3f026 .selected_b3f026,
+#app-mount .tabBarItem_b9fccc[aria-selected="true"],
+#app-mount [class*="topPill_"] [aria-selected="true"] {
+  background: linear-gradient(90deg, rgba(var(--fm-main-rgb), 0.28), rgba(var(--fm-secondary-rgb), 0.14));
+  color: var(--fm-text-strong);
+  box-shadow: var(--fm-shadow-inset);
+}
+
+#app-mount .buttons__74017 > *,
+#app-mount .attachButton__0923f,
+#app-mount .button__581d0,
+#app-mount .button_f7ecac,
+#app-mount .actionButton_dda074,
+#app-mount .voiceChannelsButton_a08117 {
+  transition:
+    transform var(--fm-transition),
+    color var(--fm-transition),
+    filter var(--fm-transition),
+    border-color var(--fm-transition);
+}
+
+#app-mount .buttons__74017 > *:hover,
+#app-mount .attachButton__0923f:hover,
+#app-mount .button__581d0:hover,
+#app-mount .button_f7ecac:hover,
+#app-mount .actionButton_dda074:hover,
+#app-mount .voiceChannelsButton_a08117:hover {
+  transform: translateY(-1px);
+  color: var(--fm-main-color);
+  filter: drop-shadow(0 0 6px rgba(var(--fm-main-rgb), 0.34));
+}

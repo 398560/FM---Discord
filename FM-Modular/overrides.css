@@ -1,0 +1,25 @@
+/**
+ * Overrides
+ */
+
+/* Discord */
+#app-mount .form_f75fb0::before,
+#app-mount .children__9293f::after,
+#app-mount .chatGradient__36d07,
+#app-mount .themedBackground__74017 {
+  background: transparent !important;
+}
+
+/* Vesktop */
+#app-mount [class*="vesktop"],
+#app-mount [class*="vc-spotify"],
+#app-mount #vc-spotify-player {
+  border-radius: var(--fm-radius-md);
+}
+
+/* Vencord */
+#app-mount [class*="vencord"],
+#app-mount [id*="vencord"],
+#app-mount [class*="vc-"] {
+  box-shadow: none;
+}
