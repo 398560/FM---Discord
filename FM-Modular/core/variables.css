@@ -23,8 +23,8 @@
   --fm-menu-opacity: 0.88;
   --fm-card-opacity: 0.60;
   --fm-popout-opacity: 0.84;
-  --fm-chat-glass-top: 0.16;
-  --fm-chat-glass-bottom: 0.06;
+  --fm-chat-glass-top: 0.02;
+  --fm-chat-glass-bottom: 0.01;
   --fm-chat-layer-opacity: 0;
   --fm-message-opacity: 0;
   --fm-message-hover-opacity: 0.06;
@@ -33,8 +33,8 @@
   --fm-sidebar-glass-bottom: 0.34;
   --fm-panel-glass-top: 0.22;
   --fm-panel-glass-bottom: 0.30;
-  --fm-members-glass-top: 0.16;
-  --fm-members-glass-bottom: 0.24;
+  --fm-members-glass-top: 0.20;
+  --fm-members-glass-bottom: 0.28;
   --fm-popout-glass-top: 0.26;
   --fm-popout-glass-bottom: 0.36;
   --fm-input-glass-top: 0.18;
