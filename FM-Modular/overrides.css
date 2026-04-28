@@ -10,6 +10,66 @@
   background: transparent !important;
 }
 
+/* Surface compatibility */
+#app-mount .sidebar_c48ade,
+#app-mount .sidebar_a4d4d9,
+#app-mount [class^="sidebar_"],
+#app-mount [class*=" sidebar_"] {
+  background: var(--fm-gradient-sidebar) !important;
+  background-image: none !important;
+  border-right: 1px solid var(--fm-border-soft) !important;
+}
+
+#app-mount .privateChannels__35e86,
+#app-mount .privateChannels_oVe7HL,
+#app-mount [class^="privateChannels_"],
+#app-mount [class*=" privateChannels_"] {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+#app-mount .privateChannels__35e86 [class^="scroller_"],
+#app-mount .privateChannels__35e86 [class*=" scroller_"],
+#app-mount .privateChannels_oVe7HL [class^="scroller_"],
+#app-mount .privateChannels_oVe7HL [class*=" scroller_"],
+#app-mount [class^="privateChannels_"] [class^="scroller_"],
+#app-mount [class^="privateChannels_"] [class*=" scroller_"],
+#app-mount [class*=" privateChannels_"] [class^="scroller_"],
+#app-mount [class*=" privateChannels_"] [class*=" scroller_"] {
+  background: rgba(0, 0, 0, var(--fm-chat-layer-opacity)) !important;
+  background-color: rgba(0, 0, 0, var(--fm-chat-layer-opacity)) !important;
+}
+
+#app-mount .visual-refresh .sidebar_c48ade::after,
+#app-mount .sidebar_c48ade::after,
+#app-mount [class^="sidebar_"]::after,
+#app-mount [class*=" sidebar_"]::after {
+  background: transparent !important;
+  display: none !important;
+}
+
+#app-mount .panels_c48ade,
+#app-mount [class^="panels_"],
+#app-mount [class*=" panels_"] {
+  background: var(--fm-gradient-panel) !important;
+  border: 1px solid var(--fm-border) !important;
+  border-radius: var(--fm-radius-md) !important;
+}
+
+#app-mount .themed__9293f,
+#app-mount .container__9293f.themed__9293f {
+  background: rgba(0, 0, 0, var(--fm-header-surface-opacity)) !important;
+}
+
+#app-mount .searchBar__35e86,
+#app-mount .searchBarComponent__35e86,
+#app-mount [class^="searchBar_"],
+#app-mount [class*=" searchBar_"] {
+  background: rgba(0, 0, 0, var(--fm-search-surface-opacity)) !important;
+  border: 1px solid rgba(var(--fm-main-rgb), 0.32) !important;
+}
+
 /* Vesktop */
 #app-mount [class*="vesktop"],
 #app-mount [class*="vc-spotify"],
