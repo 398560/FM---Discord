@@ -8,10 +8,10 @@
 #app-mount .searchBarComponent__35e86,
 #app-mount .searchBar__5ec2f,
 #app-mount .searchBar_e6b769 {
-  background: rgba(0, 0, 0, var(--fm-search-surface-opacity));
-  border: 1px solid rgba(var(--fm-main-rgb), 0.20);
-  border-radius: var(--fm-radius-sm);
-  color: var(--fm-text-color);
+  background: rgba(0, 0, 0, var(--fm-search-surface-opacity)) !important;
+  border: 1px solid rgba(var(--fm-main-rgb), 0.20) !important;
+  border-radius: var(--fm-radius-sm) !important;
+  color: var(--fm-text-color) !important;
 }
 
 #app-mount .wrapper__2ea32 .link__2ea32,
