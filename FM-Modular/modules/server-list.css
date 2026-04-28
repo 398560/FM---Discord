@@ -62,9 +62,9 @@
 #app-mount [class*="folderPreview_"] {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 3px;
-  padding: 6px;
-  opacity: 0.96;
+  gap: 2px;
+  padding: 1px;
+  opacity: 0.76;
   filter: saturate(1.04);
 }
 
