@@ -26,6 +26,8 @@
   --fm-chat-glass-top: 0.02;
   --fm-chat-glass-bottom: 0.01;
   --fm-chat-layer-opacity: 0;
+  --fm-chat-base-rgb: 14, 5, 9;
+  --fm-chat-base-bottom-rgb: 14, 5, 9;
   --fm-message-opacity: 0;
   --fm-message-hover-opacity: 0.06;
   --fm-message-active-opacity: 0.12;
@@ -48,6 +50,15 @@
   --fm-card-surface-opacity: 0.08;
   --fm-card-surface-hover-opacity: 0.12;
   --fm-reaction-surface-opacity: 0.12;
+  --fm-folder-preview-gap: 2px;
+  --fm-folder-preview-padding: 1px;
+  --fm-folder-preview-opacity: 0.76;
+  --fm-folder-preview-saturation: 1.04;
+  --fm-folder-preview-top-opacity: 0.14;
+  --fm-folder-preview-bottom-opacity: 0.18;
+  --fm-folder-preview-border-opacity: 0.18;
+  --fm-folder-preview-radius: 18px;
+  --fm-folder-preview-item-radius: 7px;
 
   --fm-bg-overlay-top: 0.14;
   --fm-bg-overlay-bottom: 0.28;
@@ -121,6 +132,11 @@
     180deg,
     rgba(var(--fm-members-base-rgb), var(--fm-members-glass-top)),
     rgba(var(--fm-members-base-bottom-rgb), var(--fm-members-glass-bottom))
+  );
+  --fm-gradient-chat: linear-gradient(
+    180deg,
+    rgba(var(--fm-chat-base-rgb), var(--fm-chat-glass-top)),
+    rgba(var(--fm-chat-base-bottom-rgb), var(--fm-chat-glass-bottom))
   );
   --fm-gradient-input: linear-gradient(
     180deg,

@@ -104,7 +104,7 @@
 
 #app-mount .content__908e2,
 #app-mount .endCap__908e2 {
-  background: rgba(0, 0, 0, calc(var(--fm-surface-opacity-mid) + 0.02)) !important;
+  background: rgba(var(--fm-panel-base-bottom-rgb), calc(var(--fm-surface-opacity-mid) + 0.02)) !important;
   color: rgba(var(--fm-main-rgb), 0.96) !important;
   backdrop-filter: blur(24px);
 }

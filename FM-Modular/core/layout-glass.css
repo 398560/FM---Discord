@@ -75,12 +75,7 @@
 
 #app-mount .chat_f75fb0,
 #app-mount .chatContent_f75fb0 {
-  background:
-    linear-gradient(
-      180deg,
-      rgba(14, 5, 9, var(--fm-chat-glass-top)),
-      rgba(14, 5, 9, var(--fm-chat-glass-bottom))
-    ) !important;
+  background: var(--fm-gradient-chat) !important;
 }
 
 #app-mount .messagesWrapper__36d07,

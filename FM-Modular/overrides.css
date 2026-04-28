@@ -75,7 +75,7 @@
 #app-mount .userProfileOuter_c0bea0,
 #app-mount .userProfileOuterThemed_c0bea0,
 #app-mount [class*="outer_"][class*="c0bea0"] {
-  background: rgba(var(--fm-main-rgb), var(--fm-popout-glass-top)) !important;
+  background: var(--fm-gradient-soft) !important;
   border: 1px solid var(--fm-border-hot) !important;
   border-radius: var(--fm-radius-lg) !important;
   box-shadow: var(--fm-glow-soft) !important;

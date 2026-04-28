@@ -27,12 +27,12 @@
   --mention-foreground: var(--fm-text-color);
   --background-message-highlight: rgba(var(--fm-main-rgb), 0.10);
   --background-message-hover: rgba(var(--fm-main-rgb), 0.06);
-  --background-floating: rgba(8, 3, 6, calc(var(--fm-surface-opacity-strong) + 0.10));
-  --background-surface-high: rgba(24, 10, 16, calc(var(--fm-surface-opacity-mid) + 0.08));
-  --background-surface-higher: rgba(10, 4, 8, calc(var(--fm-surface-opacity-strong) + 0.08));
-  --background-base-low: rgba(24, 10, 16, calc(var(--fm-surface-opacity-mid) + 0.04));
-  --background-base-lower: rgba(20, 8, 14, var(--fm-surface-opacity-mid));
-  --card-background-default: rgba(10, 4, 8, calc(var(--fm-card-surface-opacity) + 0.02));
+  --background-floating: rgba(var(--fm-popout-base-bottom-rgb), calc(var(--fm-surface-opacity-strong) + 0.10));
+  --background-surface-high: rgba(var(--fm-panel-base-rgb), calc(var(--fm-surface-opacity-mid) + 0.08));
+  --background-surface-higher: rgba(var(--fm-panel-base-bottom-rgb), calc(var(--fm-surface-opacity-strong) + 0.08));
+  --background-base-low: rgba(var(--fm-sidebar-base-rgb), calc(var(--fm-surface-opacity-mid) + 0.04));
+  --background-base-lower: rgba(var(--fm-sidebar-base-bottom-rgb), var(--fm-surface-opacity-mid));
+  --card-background-default: rgba(var(--fm-popout-base-bottom-rgb), calc(var(--fm-card-surface-opacity) + 0.02));
   --scrollbar-thin-thumb: rgba(var(--fm-main-rgb), 0.42);
   --scrollbar-auto-thumb: rgba(var(--fm-main-rgb), 0.42);
   --button-danger-background: rgba(235, 66, 92, 0.95);
