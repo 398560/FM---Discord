@@ -25,6 +25,7 @@
 .theme-dark .scroller_ef3116,
 .visual-refresh .wrapper_ef3116,
 .visual-refresh .privateChannels__35e86,
+.visual-refresh .privateChannels_e6b769,
 .visual-refresh .scroller__99e7c,
 .visual-refresh .tabBody__133bf,
 .visual-refresh .nowPlayingColumn__133bf,
@@ -44,6 +45,7 @@
 #app-mount .sidebarList__5e434,
 #app-mount .container__2637a,
 #app-mount .privateChannels__35e86,
+#app-mount .privateChannels_e6b769,
 #app-mount .wrapper_ef3116,
 #app-mount .members_c8ffbb,
 #app-mount .container_c8ffbb,
@@ -60,6 +62,7 @@
 #app-mount .sidebarList__5e434,
 #app-mount .container__2637a,
 #app-mount .privateChannels__35e86,
+#app-mount .privateChannels_e6b769,
 #app-mount .sidebar_c48ade {
   background: var(--fm-gradient-sidebar) !important;
   border-right: 1px solid var(--fm-border-soft) !important;

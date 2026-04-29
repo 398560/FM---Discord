@@ -41,7 +41,8 @@
   letter-spacing: 1px;
 }
 
-#app-mount .visual-refresh .chatContent_f75fb0::before {
+#app-mount .visual-refresh .chatContent_f75fb0::before,
+#app-mount .chatContent_f75fb0::before {
   content: var(--fm-jp-text);
   display: var(--fm-jp-display);
   position: absolute;
@@ -57,7 +58,8 @@
   letter-spacing: 6px;
 }
 
-#app-mount .visual-refresh .chatContent_f75fb0 > * {
+#app-mount .visual-refresh .chatContent_f75fb0 > *,
+#app-mount .chatContent_f75fb0 > * {
   position: relative;
   z-index: 1;
 }

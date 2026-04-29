@@ -21,6 +21,7 @@
 }
 
 #app-mount .privateChannels__35e86,
+#app-mount .privateChannels_e6b769,
 #app-mount .privateChannels_oVe7HL,
 #app-mount [class^="privateChannels_"],
 #app-mount [class*=" privateChannels_"] {
@@ -31,6 +32,8 @@
 
 #app-mount .privateChannels__35e86 [class^="scroller_"],
 #app-mount .privateChannels__35e86 [class*=" scroller_"],
+#app-mount .privateChannels_e6b769 [class^="scroller_"],
+#app-mount .privateChannels_e6b769 [class*=" scroller_"],
 #app-mount .privateChannels_oVe7HL [class^="scroller_"],
 #app-mount .privateChannels_oVe7HL [class*=" scroller_"],
 #app-mount [class^="privateChannels_"] [class^="scroller_"],
@@ -74,7 +77,11 @@
 #app-mount .outer_c0bea0,
 #app-mount .userProfileOuter_c0bea0,
 #app-mount .userProfileOuterThemed_c0bea0,
-#app-mount [class*="outer_"][class*="c0bea0"] {
+#app-mount [class*="outer_"][class*="c0bea0"],
+#app-mount .outer_c0bea0.user-profile-popout,
+#app-mount .outer_c0bea0.user-profile-modal,
+#app-mount .contentWrapper__08434,
+#app-mount .root__24502 {
   background: var(--fm-gradient-soft) !important;
   border: 1px solid var(--fm-border-hot) !important;
   border-radius: var(--fm-radius-lg) !important;
@@ -89,7 +96,10 @@
 }
 
 #app-mount .container__37e49,
-#app-mount [class^="container_"][class*="37e49"] {
+#app-mount [class^="container_"][class*="37e49"],
+#app-mount .searchResultsWrap_a98f3b,
+#app-mount .messagesPopoutWrap_e8b59c,
+#app-mount .popout__76f04 {
   background: var(--fm-gradient-panel) !important;
   border: 1px solid rgba(var(--fm-main-rgb), 0.24) !important;
   border-radius: var(--fm-radius-md) !important;

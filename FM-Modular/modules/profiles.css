@@ -5,7 +5,10 @@
 
 #app-mount .outer_c0bea0,
 #app-mount .userProfileOuter_c0bea0,
-#app-mount .userProfileOuterThemed_c0bea0.userProfileOuter_c0bea0 {
+#app-mount .userProfileOuterThemed_c0bea0.userProfileOuter_c0bea0,
+#app-mount .outer_c0bea0.user-profile-popout,
+#app-mount .outer_c0bea0.user-profile-modal,
+#app-mount [class*="outer_"][class*="c0bea0"] {
   background: var(--fm-gradient-soft) !important;
   border: 1px solid var(--fm-border-hot) !important;
   border-radius: var(--fm-radius-lg) !important;
@@ -15,7 +18,8 @@
 
 #app-mount .overlay_c0bea0,
 #app-mount .fullSizeOverlayBackground_c0bea0,
-#app-mount .biteSizeOverlayBackground_c0bea0 {
+#app-mount .biteSizeOverlayBackground_c0bea0,
+#app-mount [class*="overlay_"][class*="c0bea0"] {
   background: rgba(0, 0, 0, var(--fm-overlay-surface-opacity)) !important;
   border: 1px solid rgba(var(--fm-main-rgb), 0.18) !important;
   border-radius: var(--fm-radius-md) !important;

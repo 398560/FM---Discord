@@ -1,0 +1,119 @@
+/**
+ * Palette: Caelestia Linux
+ * Arquivo gerado automaticamente por scripts/generate-fm-caelestia-linux.sh
+ * Baseado em: /home/sabuga/.local/state/caelestia/scheme.json
+ * Estilo: FM-Modular / Caelestia Linux
+ */
+
+:root {
+  --fm-bg: url("file:///home/sabuga/Imagens/Wallpapers/1316383.jpeg");
+  --fm-gif-bg: url("file:///home/sabuga/Imagens/Wallpapers/1316383.jpeg");
+
+  --fm-main-color: #c4c8e9;
+  --fm-secondary-color: #e6bfd9;
+  --fm-main-rgb: 196, 200, 233;
+  --fm-secondary-rgb: 230, 191, 217;
+
+  --fm-text-color: #e5e1e4;
+  --fm-text-rgb: 229, 225, 228;
+  --fm-muted-color: #c7c5ce;
+  --fm-muted-rgb: 199, 197, 206;
+
+  --fm-sidebar-opacity: 0.42;
+  --fm-chat-opacity: 0.08;
+  --fm-panel-opacity: 0.16;
+  --fm-menu-opacity: 0.84;
+  --fm-card-opacity: 0.58;
+  --fm-popout-opacity: 0.90;
+
+  --fm-bg-overlay-top: 0.16;
+  --fm-bg-overlay-bottom: 0.26;
+  --fm-glow-strength: 0.12;
+  --fm-border-strength: 0.24;
+
+  --fm-chat-glass-top: 0.10;
+  --fm-chat-glass-bottom: 0.16;
+  --fm-chat-layer-opacity: 0.02;
+  --fm-message-opacity: 0.02;
+  --fm-message-hover-opacity: 0.06;
+  --fm-message-active-opacity: 0.12;
+
+  --fm-sidebar-glass-top: 0.18;
+  --fm-sidebar-glass-bottom: 0.28;
+  --fm-panel-glass-top: 0.16;
+  --fm-panel-glass-bottom: 0.24;
+  --fm-members-glass-top: 0.18;
+  --fm-members-glass-bottom: 0.24;
+  --fm-popout-glass-top: 0.24;
+  --fm-popout-glass-bottom: 0.34;
+  --fm-input-glass-top: 0.15;
+  --fm-input-glass-bottom: 0.22;
+
+  --fm-surface-opacity-soft: 0.08;
+  --fm-surface-opacity-mid: 0.12;
+  --fm-surface-opacity-strong: 0.18;
+  --fm-header-surface-opacity: 0.12;
+  --fm-search-surface-opacity: 0.11;
+  --fm-overlay-surface-opacity: 0.10;
+  --fm-card-surface-opacity: 0.08;
+  --fm-card-surface-hover-opacity: 0.12;
+  --fm-reaction-surface-opacity: 0.10;
+
+  --fm-sidebar-base-rgb: 27, 27, 29;
+  --fm-sidebar-base-bottom-rgb: 19, 19, 21;
+  --fm-panel-base-rgb: 32, 31, 33;
+  --fm-panel-base-bottom-rgb: 14, 14, 16;
+  --fm-members-base-rgb: 42, 42, 44;
+  --fm-members-base-bottom-rgb: 27, 27, 29;
+  --fm-popout-base-rgb: 53, 52, 55;
+  --fm-popout-base-bottom-rgb: 27, 27, 29;
+  --fm-input-base-rgb: 32, 31, 33;
+  --fm-input-base-bottom-rgb: 14, 14, 16;
+  --fm-chat-base-rgb: 19, 19, 21;
+  --fm-chat-base-bottom-rgb: 19, 19, 21;
+
+  --fm-surface-1: rgba(27, 27, 29, 0.10);
+  --fm-surface-2: rgba(32, 31, 33, 0.14);
+  --fm-surface-3: rgba(42, 42, 44, 0.18);
+  --fm-surface-4: rgba(19, 19, 21, 0.34);
+
+  --fm-text-strong: rgba(229, 225, 228, 0.97);
+  --fm-text-soft: rgba(229, 225, 228, 0.86);
+  --fm-text-faint: rgba(145, 144, 152, 0.72);
+
+  --fm-accent-soft: rgba(196, 200, 233, 0.12);
+  --fm-accent-mid: rgba(212, 216, 250, 0.24);
+  --fm-accent-strong: rgba(196, 200, 233, 0.44);
+  --fm-accent-secondary: rgba(230, 191, 217, 0.24);
+
+  --fm-gradient-main: linear-gradient(135deg, rgba(196, 200, 233, 0.30), rgba(230, 191, 217, 0.16));
+  --fm-gradient-strong: linear-gradient(135deg, rgba(212, 216, 250, 0.50), rgba(226, 225, 240, 0.22));
+
+  --fm-border: rgba(145, 144, 152, 0.24);
+  --fm-border-soft: rgba(70, 70, 77, 0.18);
+  --fm-border-hot: rgba(196, 200, 233, 0.28);
+  --fm-watermark-text: "ＦＭ • CAELESTIA/LINUX";
+  --fm-jp-text: "リナックス • 星雲";
+}
+
+[data-popout-root],
+.theme-dark,
+.theme-light,
+.visual-refresh.theme-dark,
+.visual-refresh.theme-light,
+.visual-refresh .theme-dark,
+.visual-refresh .theme-light {
+  --bg-brand: rgb(196, 200, 233);
+  --background-brand: rgb(196, 200, 233);
+  --text-link: #c4c8e9;
+  --button-filled-brand-background: rgb(196, 200, 233);
+  --button-filled-brand-background-hover: rgb(212, 216, 250);
+  --button-filled-brand-background-active: rgb(197, 197, 212);
+  --button-filled-brand-text: #2a2f49;
+  --mention-background: rgba(196, 200, 233, 0.18);
+  --background-message-highlight: rgba(196, 200, 233, 0.10);
+  --background-floating: rgba(42, 42, 44, 0.84);
+  --card-background-default: rgba(32, 31, 33, 0.12);
+  --scrollbar-thin-thumb: rgba(196, 200, 233, 0.34);
+  --scrollbar-auto-thumb: rgba(196, 200, 233, 0.34);
+}

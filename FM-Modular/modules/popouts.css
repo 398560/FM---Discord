@@ -6,19 +6,24 @@
 #app-mount .menu_c1e9c4,
 #app-mount .subc1e9c47c23f12ca3-menu,
 #app-mount .autocomplete__13533,
+#app-mount .autocomplete__6b0e0,
 #app-mount .container__55c99,
 #app-mount .quickswitcher_ac6cb0,
 #app-mount .root__49fc1,
+#app-mount .root__24502,
 #app-mount .container__0f2e8,
 #app-mount .messagesPopoutWrap__45690,
 #app-mount .messagesPopoutWrap_e8b59c,
 #app-mount .recentMentionsPopout__95796,
+#app-mount .searchResultsWrap_a98f3b,
 #app-mount .searchResultsWrap_a9e706,
 #app-mount .popout_a16aea,
+#app-mount .popout__76f04,
 #app-mount .browser_d98031,
 #app-mount .container_d9c882,
 #app-mount .picker__09f65,
 #app-mount .contentWrapper__9c62c,
+#app-mount .contentWrapper__08434,
 #app-mount .modalRoot_e5da2b,
 #app-mount .pictureInPictureVideo_e4cb9a {
   background: var(--fm-gradient-soft) !important;
@@ -36,6 +41,8 @@
 #app-mount .colorDefault_c1e9c4:hover,
 #app-mount .clickable__13533[aria-disabled=false] > .base__13533:hover,
 #app-mount .clickable__13533[aria-selected="true"] > .base__13533,
+#app-mount .clickable__6b0e0[aria-disabled=false] > .base__6b0e0:hover,
+#app-mount .clickable__6b0e0[aria-selected="true"] > .base__6b0e0,
 #app-mount .option_a16aea:hover,
 #app-mount .option_a16aea[aria-selected="true"]:not(.multi_a16aea) {
   background: linear-gradient(90deg, rgba(var(--fm-main-rgb), 0.24), rgba(var(--fm-secondary-rgb), 0.12)) !important;

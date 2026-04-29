@@ -13,6 +13,7 @@
 #app-mount .sidebarList__5e434,
 #app-mount .container__2637a,
 #app-mount .privateChannels__35e86,
+#app-mount .privateChannels_e6b769,
 #app-mount .wrapper_ef3116,
 #app-mount .members_c8ffbb,
 #app-mount .container_c8ffbb,
@@ -24,17 +25,24 @@
 #app-mount #vc-spotify-player,
 #app-mount .menu_c1e9c4,
 #app-mount .autocomplete__13533,
+#app-mount .autocomplete__6b0e0,
 #app-mount .container__55c99,
 #app-mount .quickswitcher_ac6cb0,
 #app-mount .root__49fc1,
+#app-mount .root__24502,
 #app-mount .outer_c0bea0,
-#app-mount .userProfileOuter_c0bea0 {
+#app-mount .userProfileOuter_c0bea0,
+#app-mount .contentWrapper__08434,
+#app-mount .messagesPopoutWrap_e8b59c,
+#app-mount .searchResultsWrap_a98f3b,
+#app-mount .popout__76f04 {
   backdrop-filter: blur(var(--fm-blur-strong-effective)) saturate(calc(100% + (45% * var(--fm-enable-blur))));
 }
 
 #app-mount .sidebarList__5e434,
 #app-mount .container__2637a,
 #app-mount .privateChannels__35e86,
+#app-mount .privateChannels_e6b769,
 #app-mount .wrapper_ef3116,
 #app-mount .chat_f75fb0,
 #app-mount .chatContent_f75fb0,
@@ -47,10 +55,16 @@
 #app-mount #vc-spotify-player,
 #app-mount .menu_c1e9c4,
 #app-mount .autocomplete__13533,
+#app-mount .autocomplete__6b0e0,
 #app-mount .container__55c99,
 #app-mount .quickswitcher_ac6cb0,
 #app-mount .root__49fc1,
+#app-mount .root__24502,
 #app-mount .outer_c0bea0,
-#app-mount .userProfileOuter_c0bea0 {
+#app-mount .userProfileOuter_c0bea0,
+#app-mount .contentWrapper__08434,
+#app-mount .messagesPopoutWrap_e8b59c,
+#app-mount .searchResultsWrap_a98f3b,
+#app-mount .popout__76f04 {
   background-color: var(--fm-surface-fallback);
 }
