@@ -1,0 +1,118 @@
+/**
+ * Palette: Preto Caelestia
+ * Arquivo gerado automaticamente por scripts/generate-fm-preto-caelestia.sh
+ * Baseado em: /home/sabuga/.local/state/caelestia/scheme.json
+ * Estilo: FM-Modular / Preto Variação
+ */
+
+:root {
+  --fm-bg: url("file:///home/sabuga/Imagens/Wallpapers/1322308.jpeg");
+  --fm-gif-bg: url("file:///home/sabuga/Imagens/Wallpapers/1322308.jpeg");
+
+  --fm-main-color: #b6c6ee;
+  --fm-secondary-color: #4f5f81;
+  --fm-main-rgb: 182, 198, 238;
+  --fm-secondary-rgb: 79, 95, 129;
+
+  --fm-text-color: #e3e5f0;
+  --fm-text-rgb: 227, 229, 240;
+  --fm-muted-color: #a8abb5;
+  --fm-muted-rgb: 168, 171, 181;
+
+  --fm-sidebar-opacity: 0.38;
+  --fm-chat-opacity: 0.05;
+  --fm-panel-opacity: 0.03;
+  --fm-menu-opacity: 0.10;
+
+  --fm-bg-overlay-top: 0.10;
+  --fm-bg-overlay-bottom: 0.12;
+
+  --fm-glow-strength: 0.05;
+  --fm-border-strength: 0.26;
+
+  --fm-chat-glass-top: 0.01;
+  --fm-chat-glass-bottom: 0.01;
+  --fm-chat-layer-opacity: 0;
+  --fm-message-opacity: 0.01;
+  --fm-message-hover-opacity: 0.02;
+  --fm-message-active-opacity: 0.09;
+
+  --fm-sidebar-glass-top: 0.02;
+  --fm-sidebar-glass-bottom: 0.10;
+  --fm-panel-glass-top: 0.02;
+  --fm-panel-glass-bottom: 0.01;
+  --fm-members-glass-top: 0.05;
+  --fm-members-glass-bottom: 0.01;
+  --fm-popout-glass-top: 0.02;
+  --fm-popout-glass-bottom: 0.08;
+  --fm-input-glass-top: 0.05;
+  --fm-input-glass-bottom: 0.01;
+
+  --fm-surface-opacity-soft: 0.05;
+  --fm-surface-opacity-mid: 0.09;
+  --fm-surface-opacity-strong: 0.11;
+  --fm-header-surface-opacity: 0.07;
+  --fm-search-surface-opacity: 0.06;
+  --fm-overlay-surface-opacity: 0.07;
+  --fm-card-surface-opacity: 0.04;
+  --fm-card-surface-hover-opacity: 0.06;
+  --fm-reaction-surface-opacity: 0.06;
+
+  --fm-sidebar-base-rgb: 17, 19, 24;
+  --fm-sidebar-base-bottom-rgb: 0, 0, 0;
+  --fm-panel-base-rgb: 23, 26, 31;
+  --fm-panel-base-bottom-rgb: 0, 0, 0;
+  --fm-members-base-rgb: 17, 19, 24;
+  --fm-members-base-bottom-rgb: 0, 0, 0;
+  --fm-popout-base-rgb: 29, 32, 38;
+  --fm-popout-base-bottom-rgb: 0, 0, 0;
+  --fm-input-base-rgb: 35, 38, 45;
+  --fm-input-base-bottom-rgb: 0, 0, 0;
+  --fm-chat-base-rgb: var(--fm-panel-base-rgb);
+  --fm-chat-base-bottom-rgb: var(--fm-panel-base-bottom-rgb);
+
+  --fm-surface-1: rgba(17, 19, 24, 0.05);
+  --fm-surface-2: rgba(23, 26, 31, 0.09);
+  --fm-surface-3: rgba(29, 32, 38, 0.11);
+  --fm-surface-4: rgba(13, 14, 18, 0.24);
+
+  --fm-text-strong: rgba(227, 229, 240, 0.97);
+  --fm-text-soft: rgba(227, 229, 240, 0.84);
+  --fm-text-faint: rgba(115, 117, 126, 0.70);
+
+  --fm-accent-soft: rgba(182, 198, 238, 0.10);
+  --fm-accent-mid: rgba(182, 198, 238, 0.18);
+  --fm-accent-strong: rgba(182, 198, 238, 0.32);
+  --fm-accent-secondary: rgba(239, 223, 255, 0.18);
+
+  --fm-gradient-main: linear-gradient(135deg, rgba(182, 198, 238, 0.18), rgba(79, 95, 129, 0.08));
+  --fm-gradient-strong: linear-gradient(135deg, rgba(182, 198, 238, 0.26), rgba(239, 223, 255, 0.12));
+
+  --fm-border: rgba(115, 117, 126, 0.26);
+  --fm-border-soft: rgba(115, 117, 126, 0.18);
+  --fm-border-hot: rgba(182, 198, 238, 0.30);
+  --fm-watermark-text: "ＦＭ • PRETO CAELESTIA";
+  --fm-jp-text: "ブラック • ダイナミック";
+}
+
+[data-popout-root],
+.theme-dark,
+.theme-light,
+.visual-refresh.theme-dark,
+.visual-refresh.theme-light,
+.visual-refresh .theme-dark,
+.visual-refresh .theme-light {
+  --bg-brand: rgb(182, 198, 238);
+  --background-brand: rgb(182, 198, 238);
+  --text-link: #b6c6ee;
+  --button-filled-brand-background: rgb(182, 198, 238);
+  --button-filled-brand-background-hover: rgb(182, 198, 238);
+  --button-filled-brand-background-active: rgb(79, 95, 129);
+  --button-filled-brand-text: #304060;
+  --mention-background: rgba(182, 198, 238, 0.18);
+  --background-message-highlight: rgba(182, 198, 238, 0.08);
+  --background-floating: rgba(29, 32, 38, 0.82);
+  --card-background-default: rgba(23, 26, 31, 0.12);
+  --scrollbar-thin-thumb: rgba(115, 117, 126, 0.38);
+  --scrollbar-auto-thumb: rgba(115, 117, 126, 0.38);
+}
