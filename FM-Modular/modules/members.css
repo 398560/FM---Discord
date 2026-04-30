@@ -120,6 +120,7 @@ div:not(:hover) > .members_c8ffbb > div {
 .members_c8ffbb:not(:hover) > .vc-membercount-member-list {
     flex-wrap: wrap;
 }
+
 /* ───── FIX HITBOX DA LISTA DE MEMBROS ───── */
 
 /* aumenta a area sensivel do hover */

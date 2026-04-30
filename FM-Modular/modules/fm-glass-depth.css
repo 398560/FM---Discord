@@ -1,0 +1,41 @@
+/**
+ * @name FM Glass Depth
+ * @author Plague Doctor
+ * @version 1.0.0
+ */
+
+:root {
+  --fm-glass-light: rgba(10, 10, 14, 0.14);
+  --fm-glass-mid: rgba(10, 10, 14, 0.28);
+  --fm-glass-heavy: rgba(8, 8, 12, 0.72);
+
+  --fm-blur-light: blur(4px) saturate(135%);
+  --fm-blur-mid: blur(8px) saturate(150%);
+  --fm-blur-heavy: blur(18px) saturate(170%);
+}
+
+#app-mount .chat_f75fb0,
+#app-mount .chatContent_f75fb0 {
+  background: transparent !important;
+}
+
+#app-mount .members_c8ffbb,
+#app-mount .container_c8ffbb,
+#app-mount [class*="members_"],
+#app-mount .panels_c48ade,
+#app-mount .container__37e49 {
+  background: var(--fm-glass-light) !important;
+  backdrop-filter: var(--fm-blur-light) !important;
+  -webkit-backdrop-filter: var(--fm-blur-light) !important;
+}
+
+#app-mount [role="menu"],
+#app-mount [class*="popout_"],
+#app-mount [class*="autocomplete_"],
+#app-mount [class*="quickswitcher_"],
+#app-mount [class*="userPopout"],
+#app-mount [class*="userProfile"] {
+  background: var(--fm-glass-heavy) !important;
+  backdrop-filter: var(--fm-blur-heavy) !important;
+  -webkit-backdrop-filter: var(--fm-blur-heavy) !important;
+}

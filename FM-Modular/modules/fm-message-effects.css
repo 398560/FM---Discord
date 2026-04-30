@@ -1,0 +1,31 @@
+/**
+ * @name FM Message Effects
+ * @author Plague Doctor
+ * @version 1.0.0
+ */
+
+#app-mount .message__5126c,
+#app-mount .wrapper_c19a55 {
+  transition:
+    background 0.18s ease,
+    border-color 0.18s ease,
+    transform 0.18s ease,
+    box-shadow 0.18s ease !important;
+}
+
+#app-mount .message__5126c:hover,
+#app-mount .wrapper_c19a55:hover {
+  transform: translateX(2px);
+  box-shadow: 0 0 14px rgba(var(--fm-main-rgb), 0.12) !important;
+}
+
+#app-mount .mentioned__5126c,
+#app-mount .replying__5126c {
+  box-shadow:
+    inset 3px 0 0 rgba(var(--fm-main-rgb), 0.85),
+    0 0 16px rgba(var(--fm-main-rgb), 0.16) !important;
+}
+
+#app-mount [class*="messageContent_"] a {
+  text-shadow: 0 0 8px rgba(var(--fm-main-rgb), 0.25);
+}

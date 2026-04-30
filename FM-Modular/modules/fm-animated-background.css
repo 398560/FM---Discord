@@ -1,0 +1,47 @@
+/**
+ * @name FM Animated Background
+ * @author Plague Doctor
+ * @version 1.0.0
+ */
+
+@keyframes fm-bg-drift {
+  0% {
+    background-position: 50% 50%;
+  }
+
+  50% {
+    background-position: 54% 48%;
+  }
+
+  100% {
+    background-position: 50% 50%;
+  }
+}
+
+#app-mount::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -10;
+  pointer-events: none;
+
+  background-image: var(--fm-bg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  animation: fm-bg-drift 18s ease-in-out infinite;
+  filter: saturate(1.08) brightness(0.82);
+}
+
+#app-mount::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -9;
+  pointer-events: none;
+
+  background:
+    radial-gradient(circle at top, rgba(var(--fm-main-rgb), 0.12), transparent 35%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0.32));
+}

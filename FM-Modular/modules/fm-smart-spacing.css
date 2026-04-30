@@ -1,0 +1,34 @@
+/**
+ * @name FM Smart Spacing
+ * @author Plague Doctor
+ * @version 1.0.0
+ */
+
+#app-mount [class*="username_"]::after {
+  content: " ";
+  margin-right: 4px;
+}
+
+#app-mount [class*="discriminator_"],
+#app-mount [class*="userTag_"] {
+  margin-left: 5px !important;
+  opacity: 0.72;
+  font-size: 0.9em;
+}
+
+#app-mount [class*="messageContent_"] {
+  line-height: 1.45;
+}
+
+#app-mount [class*="repliedMessage_"] {
+  margin-bottom: 4px !important;
+}
+
+#app-mount [class*="embedFull_"],
+#app-mount [class*="mediaAttachmentsContainer_"] {
+  margin-top: 6px !important;
+}
+
+#app-mount [class*="channelTextArea_"] {
+  margin-bottom: 8px !important;
+}

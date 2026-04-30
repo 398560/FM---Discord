@@ -1,0 +1,29 @@
+/**
+ * @name FM Hover Cards
+ * @author Plague Doctor
+ * @version 1.0.0
+ */
+
+#app-mount [class*="card_"],
+#app-mount [class*="peopleListItem_"],
+#app-mount [class*="member_"],
+#app-mount [class*="channel_"],
+#app-mount [class*="interactive_"] {
+  transition:
+    transform 0.18s ease,
+    background 0.18s ease,
+    border-color 0.18s ease,
+    box-shadow 0.18s ease !important;
+}
+
+#app-mount [class*="card_"]:hover,
+#app-mount [class*="peopleListItem_"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28), 0 0 14px rgba(var(--fm-main-rgb), 0.10) !important;
+}
+
+#app-mount [class*="member_"]:hover,
+#app-mount [class*="channel_"]:hover,
+#app-mount [class*="interactive_"]:hover {
+  transform: translateX(2px);
+}
