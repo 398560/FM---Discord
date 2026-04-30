@@ -6,8 +6,8 @@
  */
 
 :root {
-  --fm-module-message-bg: rgba(10, 10, 14, 0.24);
-  --fm-module-message-bg-hover: rgba(25, 25, 35, 0.34);
+--fm-module-message-bg: rgba(10, 10, 14, 0.12);
+--fm-module-message-bg-hover: rgba(25, 25, 35, 0.22);
   --fm-module-message-border: rgba(255, 255, 255, 0.08);
   --fm-module-message-border-hover: rgba(255, 255, 255, 0.16);
 
