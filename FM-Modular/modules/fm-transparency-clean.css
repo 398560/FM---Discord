@@ -1,33 +1,28 @@
 /**
  * @name FM Modular — Transparência Clean
  * @author Plague Doctor
- * @description Módulo reutilizável para deixar temas do Discord transparentes, sem acrílico global, com cards clean nas mensagens e blur apenas em perfil/configs.
- * @version 1.0.0
+ * @description Transparência clean com leitura melhor, blur em popouts/configs/autocomplete/call status.
+ * @version 1.1.0
  */
 
-/* ─────────────────────────────────────────────
-   FM MODULE: TRANSPARENCIA CLEAN
-   Use:
-   @import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/modules/fm-transparency-clean.css");
-   ───────────────────────────────────────────── */
-
 :root {
-  --fm-module-message-bg: rgba(15, 15, 20, 0.16);
-  --fm-module-message-bg-hover: rgba(25, 25, 35, 0.24);
-  --fm-module-message-border: rgba(255, 255, 255, 0.055);
-  --fm-module-message-border-hover: rgba(255, 255, 255, 0.11);
+  --fm-module-message-bg: rgba(12, 12, 16, 0.24);
+  --fm-module-message-bg-hover: rgba(25, 25, 35, 0.34);
+  --fm-module-message-border: rgba(255, 255, 255, 0.075);
+  --fm-module-message-border-hover: rgba(255, 255, 255, 0.14);
 
-  --fm-module-surface-bg: rgba(255, 255, 255, 0.05);
+  --fm-module-surface-bg: rgba(10, 10, 14, 0.22);
+  --fm-module-strong-bg: rgba(10, 10, 14, 0.42);
+  --fm-module-popout-bg: rgba(8, 8, 12, 0.68);
 
-  --fm-module-blur-bg: rgba(10, 10, 15, 0.55);
-  --fm-module-profile-blur: blur(20px) saturate(160%);
+  --fm-module-surface-blur: blur(8px) saturate(145%);
+  --fm-module-popout-blur: blur(22px) saturate(165%);
   --fm-module-message-blur: blur(3px);
 
   --fm-module-radius: 10px;
 }
 
-/* ───── BASE TRANSPARENTE ───── */
-
+/* base transparente */
 #app-mount .chat_f75fb0,
 #app-mount .chatContent_f75fb0,
 #app-mount .messagesWrapper__36d07,
@@ -35,21 +30,16 @@
 #app-mount .container__36d07,
 #app-mount .content_f75fb0 {
   background: transparent !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
 }
 
-/* ───── REMOVE ACRILICO GLOBAL ───── */
-
+/* remove blur só do que não precisa */
 #app-mount * {
-  backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
 }
 
-/* ───── SIDEBAR / CANAIS / MEMBROS / MENUS TRANSPARENTES ───── */
-
+/* áreas principais com fundo mais legível */
 #app-mount .privateChannels__35e86,
-#app-mount .privateChannels_oVe7HL,
 #app-mount [class^="privateChannels_"],
 #app-mount [class*=" privateChannels_"],
 #app-mount .members_c8ffbb,
@@ -57,36 +47,49 @@
 #app-mount [class^="members_"],
 #app-mount [class*=" members_"],
 #app-mount .panels_c48ade,
-#app-mount .container__37e49,
+#app-mount .container__37e49 {
+  background: var(--fm-module-surface-bg) !important;
+  backdrop-filter: var(--fm-module-surface-blur) !important;
+  -webkit-backdrop-filter: var(--fm-module-surface-blur) !important;
+}
+
+/* menus, autocomplete, @mention, busca, quickswitcher */
 #app-mount .menu_c1e9c4,
 #app-mount .autocomplete__13533,
-#app-mount .quickswitcher_ac6cb0 {
-  background: var(--fm-module-surface-bg) !important;
+#app-mount .quickswitcher_ac6cb0,
+#app-mount [class*="autocomplete_"],
+#app-mount [class*="popout_"],
+#app-mount [class*="resultsGroup_"],
+#app-mount [class*="option_"] {
+  background: var(--fm-module-popout-bg) !important;
+  backdrop-filter: var(--fm-module-popout-blur) !important;
+  -webkit-backdrop-filter: var(--fm-module-popout-blur) !important;
+  border: 1px solid rgba(var(--fm-main-rgb, 166,166,166), 0.22) !important;
 }
 
-/* ───── SCROLLERS TRANSPARENTES ───── */
-
-#app-mount [class^="scroller_"],
-#app-mount [class*=" scroller_"] {
-  background: transparent !important;
+/* status da call / “o que você perdeu” / cards de aviso */
+#app-mount [class*="callContainer_"],
+#app-mount [class*="voiceCallWrapper_"],
+#app-mount [class*="channelCall_"],
+#app-mount [class*="missedMessages_"],
+#app-mount [class*="newMessagesBar_"],
+#app-mount [class*="jumpToPresentBar_"] {
+  background: var(--fm-module-strong-bg) !important;
+  backdrop-filter: var(--fm-module-popout-blur) !important;
+  -webkit-backdrop-filter: var(--fm-module-popout-blur) !important;
+  border: 1px solid rgba(var(--fm-main-rgb, 166,166,166), 0.25) !important;
 }
 
-/* ───── MENSAGENS CLEAN SEM QUEBRAR AVATAR ───── */
-
+/* mensagens */
 #app-mount .message__5126c,
 #app-mount .wrapper_c19a55 {
   background: var(--fm-module-message-bg) !important;
   border: 1px solid var(--fm-module-message-border) !important;
   border-radius: var(--fm-module-radius) !important;
-
   backdrop-filter: var(--fm-module-message-blur) !important;
   -webkit-backdrop-filter: var(--fm-module-message-blur) !important;
-
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.015) !important;
-
   margin-top: 3px !important;
   margin-bottom: 3px !important;
-
   transition: background 0.18s ease, border-color 0.18s ease !important;
 }
 
@@ -100,11 +103,10 @@
 #app-mount .replying__5126c,
 #app-mount .ephemeral__5126c,
 #app-mount .message__5126c.selected__5126c {
-  background: rgba(var(--fm-main-rgb, 166, 166, 166), 0.14) !important;
-  border-color: rgba(var(--fm-main-rgb, 166, 166, 166), 0.24) !important;
+  background: rgba(var(--fm-main-rgb, 166,166,166), 0.20) !important;
+  border-color: rgba(var(--fm-main-rgb, 166,166,166), 0.34) !important;
 }
 
-/* impede conteúdo interno de virar card separado */
 #app-mount [class*="contents_"],
 #app-mount [class*="messageContent_"] {
   background: transparent !important;
@@ -114,12 +116,10 @@
   display: block !important;
 }
 
-/* replies limpas */
+/* reply limpa */
 #app-mount [class*="repliedMessage_"] {
   background: transparent !important;
   border: none !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
 }
 
 /* embeds / imagens */
@@ -130,31 +130,22 @@
   overflow: hidden !important;
 }
 
-/* ───── PERFIL / POPOUT COM BLUR ───── */
-
+/* perfil / popout / configs */
 #app-mount [class*="userPopout"],
 #app-mount [class*="userProfile"],
 #app-mount [class*="profilePanel"],
 #app-mount [class*="outer_"][class*="user"],
-#app-mount [class*="focusLock"] [class*="layer"] {
-  background: var(--fm-module-blur-bg) !important;
-  backdrop-filter: var(--fm-module-profile-blur) !important;
-  -webkit-backdrop-filter: var(--fm-module-profile-blur) !important;
-}
-
-/* ───── CONFIGURAÇÕES COM BLUR ───── */
-
 #app-mount [class*="standardSidebarView"],
 #app-mount [class*="contentRegion"],
 #app-mount [class*="sidebarRegion"],
+#app-mount [class*="focusLock"] [class*="layer"],
 #app-mount [class*="layer"][aria-label="User Settings"] {
-  background: var(--fm-module-blur-bg) !important;
-  backdrop-filter: var(--fm-module-profile-blur) !important;
-  -webkit-backdrop-filter: var(--fm-module-profile-blur) !important;
+  background: var(--fm-module-popout-bg) !important;
+  backdrop-filter: var(--fm-module-popout-blur) !important;
+  -webkit-backdrop-filter: var(--fm-module-popout-blur) !important;
 }
 
-/* ───── FOLDERS / ICONES ───── */
-
+/* folders */
 #app-mount .folderPreview__48112,
 #app-mount [class*="folderPreview_"] {
   display: grid !important;
@@ -162,7 +153,6 @@
   gap: 2px;
   padding: 1px;
   opacity: 0.76;
-  filter: saturate(1.04);
 }
 
 #app-mount .folderPreviewWrapper__48112::before,
