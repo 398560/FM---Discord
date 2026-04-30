@@ -1,17 +1,17 @@
 /**
  * @name FM Modular — Transparência Clean
  * @author Plague Doctor
- * @description Transparência clean com leitura perfeita (menus, @, call status corrigidos)
- * @version 1.2.0
+ * @description Transparência clean com leitura melhor, menus, @mention, call status e activity corrigidos.
+ * @version 1.3.0
  */
 
 :root {
-  --fm-module-message-bg: rgba(10, 10, 14, 0.50);
-  --fm-module-message-bg-hover: rgba(25, 25, 35, 0.40);
+  --fm-module-message-bg: rgba(10, 10, 14, 0.24);
+  --fm-module-message-bg-hover: rgba(25, 25, 35, 0.34);
   --fm-module-message-border: rgba(255, 255, 255, 0.08);
   --fm-module-message-border-hover: rgba(255, 255, 255, 0.16);
 
-  --fm-module-surface-bg: rgba(10, 10, 14, 0.55);
+  --fm-module-surface-bg: rgba(10, 10, 14, 0.38);
   --fm-module-strong-bg: rgba(10, 10, 14, 0.72);
   --fm-module-popout-bg: rgba(8, 8, 12, 0.88);
 
@@ -51,7 +51,7 @@
   -webkit-backdrop-filter: var(--fm-module-surface-blur) !important;
 }
 
-/* ───── MENUS / CLICK DIREITO / @ / BUSCA ───── */
+/* menus / botao direito / @ / busca */
 #app-mount [role="menu"],
 #app-mount [class*="menu_"],
 #app-mount [class*="submenu_"],
@@ -64,23 +64,22 @@
   background: var(--fm-module-popout-bg) !important;
   backdrop-filter: var(--fm-module-popout-blur) !important;
   -webkit-backdrop-filter: var(--fm-module-popout-blur) !important;
-
-  border: 1px solid rgba(var(--fm-main-rgb,166,166,166), 0.30) !important;
-  box-shadow: 0 12px 35px rgba(0,0,0,0.55) !important;
+  border: 1px solid rgba(var(--fm-main-rgb, 166, 166, 166), 0.30) !important;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.55) !important;
 }
 
 /* itens do menu */
 #app-mount [role="menuitem"],
 #app-mount [class*="item_"] {
-  background: rgba(255,255,255,0.05) !important;
+  background: rgba(255, 255, 255, 0.05) !important;
 }
 
 #app-mount [role="menuitem"]:hover,
 #app-mount [class*="item_"]:hover {
-  background: rgba(var(--fm-main-rgb,166,166,166),0.25) !important;
+  background: rgba(var(--fm-main-rgb, 166, 166, 166), 0.25) !important;
 }
 
-/* ───── STATUS CALL / BARRAS (O QUE VOCE PERDEU) ───── */
+/* status call / barras */
 #app-mount [class*="callContainer_"],
 #app-mount [class*="voiceCallWrapper_"],
 #app-mount [class*="channelCall_"],
@@ -90,20 +89,17 @@
   background: var(--fm-module-strong-bg) !important;
   backdrop-filter: var(--fm-module-popout-blur) !important;
   -webkit-backdrop-filter: var(--fm-module-popout-blur) !important;
-
-  border: 1px solid rgba(var(--fm-main-rgb,166,166,166),0.30) !important;
+  border: 1px solid rgba(var(--fm-main-rgb, 166, 166, 166), 0.30) !important;
 }
 
-/* ───── MENSAGENS ───── */
+/* mensagens */
 #app-mount .message__5126c,
 #app-mount .wrapper_c19a55 {
   background: var(--fm-module-message-bg) !important;
   border: 1px solid var(--fm-module-message-border) !important;
   border-radius: var(--fm-module-radius) !important;
-
   backdrop-filter: var(--fm-module-message-blur) !important;
   -webkit-backdrop-filter: var(--fm-module-message-blur) !important;
-
   margin: 3px 0 !important;
   transition: all 0.18s ease !important;
 }
@@ -118,13 +114,19 @@
 #app-mount .mentioned__5126c,
 #app-mount .replying__5126c,
 #app-mount .message__5126c.selected__5126c {
-  background: rgba(var(--fm-main-rgb,166,166,166),0.22) !important;
-  border-color: rgba(var(--fm-main-rgb,166,166,166),0.38) !important;
+  background: rgba(var(--fm-main-rgb, 166, 166, 166), 0.22) !important;
+  border-color: rgba(var(--fm-main-rgb, 166, 166, 166), 0.38) !important;
 }
 
-/* limpa conteúdo interno */
+/* limpa conteudo interno */
 #app-mount [class*="contents_"],
 #app-mount [class*="messageContent_"] {
+  background: transparent !important;
+  border: none !important;
+}
+
+/* reply limpa */
+#app-mount [class*="repliedMessage_"] {
   background: transparent !important;
   border: none !important;
 }
@@ -148,4 +150,32 @@
   background: var(--fm-module-popout-bg) !important;
   backdrop-filter: var(--fm-module-popout-blur) !important;
   -webkit-backdrop-filter: var(--fm-module-popout-blur) !important;
+}
+
+/* card de atividade / hover em call */
+#app-mount [class*="activityPanel_"],
+#app-mount [class*="activity_"],
+#app-mount [class*="userPopoutOverlayBackground_"],
+#app-mount [class*="overlayBackground_"],
+#app-mount [class*="biteSize_"],
+#app-mount [class*="fullSize_"] {
+  background: var(--fm-module-popout-bg) !important;
+  backdrop-filter: var(--fm-module-popout-blur) !important;
+  -webkit-backdrop-filter: var(--fm-module-popout-blur) !important;
+  border: 1px solid rgba(var(--fm-main-rgb, 166, 166, 166), 0.30) !important;
+}
+
+/* folders */
+#app-mount .folderPreview__48112,
+#app-mount [class*="folderPreview_"] {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2px;
+  padding: 1px;
+  opacity: 0.76;
+}
+
+#app-mount .folderPreviewWrapper__48112::before,
+#app-mount [class*="folderIconWrapper_"]::before {
+  content: none !important;
 }
