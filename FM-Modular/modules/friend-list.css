@@ -722,3 +722,17 @@
   -webkit-backdrop-filter: blur(6px) saturate(140%) !important;
   border: 1px solid rgba(255,255,255,0.08) !important;
 }
+
+/* ───── SEPARAR USERNAME DO @ ───── */
+.peopleColumn__133bf [class*="username_"]::after {
+  content: " ";
+  margin-right: 4px;
+}
+
+/* garante que o @ tenha estilo diferente */
+.peopleColumn__133bf [class*="discriminator_"],
+.peopleColumn__133bf [class*="userTag_"] {
+  opacity: 0.7;
+  margin-left: 4px;
+  font-size: 0.9em;
+}
