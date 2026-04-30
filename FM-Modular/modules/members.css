@@ -1,9 +1,9 @@
 /**
- * FM Members Clean
- * overlay auto-hide sem empurrar o chat
+ * FM Members Overlay FIXED
+ * auto-hide com área de ativação funcional
  */
 
-/* container vira overlay */
+/* container principal */
 .membersWrap_c8ffbb {
   position: absolute !important;
   top: 0 !important;
@@ -11,36 +11,32 @@
   height: 100% !important;
   z-index: 50 !important;
 
-  transform: translateX(calc(100% - 36px)) !important;
-  transition: transform 0.35s ease !important;
-
-  pointer-events: auto !important;
+  transform: translateX(calc(100% - 40px)) !important;
+  transition: transform 0.3s ease !important;
 }
 
-/* abre quando passa o mouse */
+/* abre */
 .membersWrap_c8ffbb:hover {
   transform: translateX(0) !important;
 }
 
-/* visual da lista */
+/* 🔥 ÁREA DE ATIVAÇÃO (ESSA É A PARTE QUE FALTAVA) */
+.membersWrap_c8ffbb::before {
+  content: "";
+  position: absolute;
+
+  left: -40px; /* aumenta área pra pegar o mouse */
+  top: 0;
+
+  width: 40px;
+  height: 100%;
+
+  pointer-events: auto;
+}
+
+/* visual */
 .members_c8ffbb {
   background: rgba(10, 10, 14, 0.20) !important;
   backdrop-filter: blur(6px) saturate(140%) !important;
   -webkit-backdrop-filter: blur(6px) saturate(140%) !important;
-}
-
-/* aba fina pra ativar */
-.membersWrap_c8ffbb::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-
-  width: 36px;
-  height: 100%;
-
-  background: rgba(var(--fm-main-rgb, 255, 255, 255), 0.10);
-  border-left: 1px solid rgba(var(--fm-main-rgb, 255, 255, 255), 0.25);
-
-  pointer-events: auto;
 }
