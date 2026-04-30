@@ -6,16 +6,16 @@
  */
 
 :root {
-  --fm-module-message-bg: rgba(12, 12, 16, 0.24);
+  --fm-module-message-bg: rgba(12, 12, 16, 0.45);
   --fm-module-message-bg-hover: rgba(25, 25, 35, 0.34);
   --fm-module-message-border: rgba(255, 255, 255, 0.075);
   --fm-module-message-border-hover: rgba(255, 255, 255, 0.14);
 
-  --fm-module-surface-bg: rgba(10, 10, 14, 0.22);
-  --fm-module-strong-bg: rgba(10, 10, 14, 0.42);
-  --fm-module-popout-bg: rgba(8, 8, 12, 0.68);
+--fm-module-surface-bg: rgba(10, 10, 14, 0.22);
+--fm-module-strong-bg: rgba(10, 10, 14, 0.42);
+--fm-module-popout-bg: rgba(8, 8, 12, 0.68);
 
-  --fm-module-surface-blur: blur(8px) saturate(145%);
+--fm-module-surface-blur: blur(8px) saturate(145%);
   --fm-module-popout-blur: blur(22px) saturate(165%);
   --fm-module-message-blur: blur(3px);
 
