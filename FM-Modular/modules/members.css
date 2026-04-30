@@ -121,33 +121,40 @@ div:not(:hover) > .members_c8ffbb > div {
     flex-wrap: wrap;
 }
 
-/* ───── FIX HITBOX DA LISTA DE MEMBROS ───── */
+/* ───── FIX HITBOX SEM QUEBRAR LAYOUT ───── */
 
-/* aumenta a area sensivel do hover */
 .membersWrap_c8ffbb {
-  padding-left: 220px !important;
-  margin-left: calc(-220px - var(--member-list-collapsed-transform)) !important;
+  position: relative;
 }
 
-/* quando passa o mouse, mantém aberto */
-.membersWrap_c8ffbb:hover {
+/* cria area invisivel maior */
+.membersWrap_c8ffbb::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -160px; /* area que expande pro lado */
+  width: 160px;
+  height: 100%;
+  pointer-events: auto;
+}
+
+/* quando hover nessa area OU na lista → abre */
+.membersWrap_c8ffbb:hover,
+.membersWrap_c8ffbb::before:hover {
   transform: none !important;
   margin-left: 0 !important;
 }
 
-/* garante que a lista aberta tenha area real */
+/* garante que a lista interage normal */
 .membersWrap_c8ffbb:hover .members_c8ffbb {
-  width: var(--custom-member-list-width) !important;
-  min-width: var(--custom-member-list-width) !important;
-  pointer-events: auto !important;
+  pointer-events: auto;
 }
 
-/* deixa transição suave */
+/* transição suave */
 .membersWrap_c8ffbb,
 .members_c8ffbb {
-  transition: all 0.35s ease !important;
+  transition: transform 0.35s ease, margin 0.35s ease !important;
 }
-
 /* Avatar-only DM profile */
 /* .outer_c0bea0:not(.user-profile-modal):not(.user-profile-popout) is the only way to select just the DM profile area */
 /*.outer_c0bea0:not(.user-profile-modal):not(.user-profile-popout) {*/
