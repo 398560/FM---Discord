@@ -5,31 +5,5 @@
  * @version 1.0.0
  */
 
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/core/variables.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/features.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/palettes/caelestia-linux.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/animations/smooth.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/core/reset.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/core/discord-vars.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/core/background.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/core/layout-glass.css");
-
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/modules/animations.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/modules/glow.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/modules/server-list.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/modules/channels.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/modules/messages.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/modules/input-area.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/modules/buttons.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/modules/popouts.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/modules/profiles.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/modules/emoji-picker.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/modules/members.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/modules/badges.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/modules/forum.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/modules/codeblocks.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/modules/tooltips.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/modules/scrollbars.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/modules/watermark.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/modules/fixes.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/overrides.css");
+@import url("https://raw.githubusercontent.com/398560/FM---Discord/main/FM-Modular/palettes/caelestia-linux.css");
+@import url("https://raw.githubusercontent.com/398560/FM---Discord/main/FM-Modular/animations/smooth.css");

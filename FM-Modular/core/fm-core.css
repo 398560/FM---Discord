@@ -1,0 +1,22 @@
+/**
+ * FM 2.0 Core
+ * Agrega apenas as bases e modulos estaveis compartilhados.
+ */
+
+@import url("https://raw.githubusercontent.com/398560/FM---Discord/main/FM-Modular/core/fm-vars.css");
+@import url("https://raw.githubusercontent.com/398560/FM---Discord/main/FM-Modular/core/fm-reset.css");
+
+@import url("https://raw.githubusercontent.com/398560/FM---Discord/main/FM-Modular/modules/fm-transparency-clean.css");
+@import url("https://raw.githubusercontent.com/398560/FM---Discord/main/FM-Modular/modules/animations.css");
+@import url("https://raw.githubusercontent.com/398560/FM---Discord/main/FM-Modular/modules/buttons.css");
+@import url("https://raw.githubusercontent.com/398560/FM---Discord/main/FM-Modular/modules/channels.css");
+@import url("https://raw.githubusercontent.com/398560/FM---Discord/main/FM-Modular/modules/input-area.css");
+@import url("https://raw.githubusercontent.com/398560/FM---Discord/main/FM-Modular/modules/popouts.css");
+@import url("https://raw.githubusercontent.com/398560/FM---Discord/main/FM-Modular/modules/profiles.css");
+@import url("https://raw.githubusercontent.com/398560/FM---Discord/main/FM-Modular/modules/members.css");
+@import url("https://raw.githubusercontent.com/398560/FM---Discord/main/FM-Modular/modules/server-list.css");
+@import url("https://raw.githubusercontent.com/398560/FM---Discord/main/FM-Modular/modules/badges.css");
+@import url("https://raw.githubusercontent.com/398560/FM---Discord/main/FM-Modular/modules/codeblocks.css");
+@import url("https://raw.githubusercontent.com/398560/FM---Discord/main/FM-Modular/modules/tooltips.css");
+@import url("https://raw.githubusercontent.com/398560/FM---Discord/main/FM-Modular/modules/watermark.css");
+@import url("https://raw.githubusercontent.com/398560/FM---Discord/main/FM-Modular/modules/Links.css");

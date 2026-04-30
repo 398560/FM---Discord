@@ -1,46 +1,9 @@
 /**
  * @name FM / Builder
  * @author Plague Doctor
- * @description Monte um tema ativando ou removendo imports
- * @version 3.0.0
+ * @description Tema base FM 2.0 para montar variacoes a partir do core e de um preset.
+ * @version 4.0.0
  */
 
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/core/variables.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/features.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/palettes/purple.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/animations/smooth.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/core/reset.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/core/discord-vars.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/core/background.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/core/layout-glass.css");
-
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/modules/animations.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/modules/glow.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/modules/server-list.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/modules/channels.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/modules/messages.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/modules/input-area.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/modules/buttons.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/modules/popouts.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/modules/profiles.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/modules/emoji-picker.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/modules/members.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/modules/badges.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/modules/forum.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/modules/codeblocks.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/modules/tooltips.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/modules/scrollbars.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/modules/watermark.css");
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/modules/fixes.css");
-
-/* @import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/plugins/animated-glow.css"); */
-/* @import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/plugins/custom-logo.css"); */
-/* @import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/plugins/animated-background.css"); */
-/* @import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/plugins/hover-effects.css"); */
-/* @import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/plugins/typing-effects.css"); */
-/* @import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/plugins/ripple-click.css"); */
-/* @import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/plugins/neon-cursor.css"); */
-/* @import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/plugins/parallax.css"); */
-/* @import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/performance-mode.css"); */
-
-@import url("https://cdn.jsdelivr.net/gh/398560/FM---Discord@main/FM-Modular/overrides.css");
+@import url("https://raw.githubusercontent.com/398560/FM---Discord/main/FM-Modular/core/fm-core.css");
+@import url("https://raw.githubusercontent.com/398560/FM---Discord/main/FM-Modular/presets/trojan-purple.theme.css");
