@@ -2,7 +2,7 @@
  * @name FM Modular — Transparência Clean
  * @author Plague Doctor
  * @description Transparência clean, DM sem blur, menus legíveis e profiles corrigidos
- * @version 1.5.0
+ * @version 1.5.1
  */
 
 :root {
@@ -191,4 +191,28 @@
 #app-mount .folderPreviewWrapper__48112::before,
 #app-mount [class*="folderIconWrapper_"]::before {
   content: none !important;
+}
+
+/* ───── LISTA DE MEMBROS (SERVER) ───── */
+#app-mount .members_c8ffbb,
+#app-mount .container_c8ffbb,
+#app-mount [class*="members_"] {
+  background: rgba(10, 10, 14, 0.18) !important;
+  backdrop-filter: blur(6px) saturate(140%) !important;
+  -webkit-backdrop-filter: blur(6px) saturate(140%) !important;
+}
+
+/* remove fundos internos feios */
+#app-mount [class*="member_"],
+#app-mount [class*="membersGroup_"] {
+  background: transparent !important;
+}
+
+/* ───── PROFILE LATERAL (DM) ───── */
+#app-mount [class*="profilePanel_"],
+#app-mount [class*="userProfileOuter_"],
+#app-mount [class*="userPanelInner_"] {
+  background: rgba(10, 10, 14, 0.25) !important;
+  backdrop-filter: blur(8px) saturate(150%) !important;
+  -webkit-backdrop-filter: blur(8px) saturate(150%) !important;
 }
