@@ -54,9 +54,10 @@
 .theme-dark {
     --FG-search-background: var(--background-tertiary);
 
---FG-cards-background-normal: rgba(15, 15, 20, 0.35);
---FG-cards-background-hover: rgba(15, 15, 20, 0.55);
---FG-cards-background-active: rgba(15, 15, 20, 0.65);
+    --FG-cards-background-normal: var(--background-secondary);
+    --FG-cards-background-hover: var(--activity-card-background);
+
+    --FG-cards-background-active: var(--activity-card-background);
 
     --FG-cards-border-color-normal: var(--background-modifier-accent);
     --FG-cards-border-color-hover: var(--background-modifier-accent);
@@ -656,83 +657,4 @@
 /* Hide the native dividers so they don't consume grid cells */
 .peopleColumn__133bf .peopleList__5ec2f > div > .divider_cc6179 {
     display: none !important;
-}
-
-/* ===== FIX TRANSPARENCIA FM ===== */
-
-.peopleColumn__133bf .peopleListItem_cc6179 {
-    background: var(--FG-cards-background-normal) !important;
-    backdrop-filter: blur(10px) saturate(140%);
-    -webkit-backdrop-filter: blur(10px) saturate(140%);
-    border: 1px solid rgba(255,255,255,0.08) !important;
-}
-
-/* hover */
-.peopleColumn__133bf .peopleListItem_cc6179:hover {
-    background: var(--FG-cards-background-hover) !important;
-}
-
-/* ativo */
-.peopleColumn__133bf .peopleListItem_cc6179.active_cc6179 {
-    background: var(--FG-cards-background-active) !important;
-}
-
-/* ===== FM FIX FRIENDS GRID CLEAN ===== */
-
-/* fundo dos cards */
-.peopleColumn__133bf .peopleListItem_cc6179 {
-  background: rgba(10, 10, 14, 0.22) !important;
-  border: 1px solid rgba(255, 255, 255, 0.08) !important;
-  border-radius: 10px !important;
-  backdrop-filter: blur(6px) saturate(140%) !important;
-  -webkit-backdrop-filter: blur(6px) saturate(140%) !important;
-  overflow: hidden !important;
-}
-
-/* hover */
-.peopleColumn__133bf .peopleListItem_cc6179:hover {
-  background: rgba(10, 10, 14, 0.34) !important;
-}
-
-/* REMOVE A FAIXA VERDE BUGADA */
-.peopleColumn__133bf .userInfo__0a06e::before {
-  background: rgba(255, 255, 255, 0.05) !important;
-  background-image: none !important;
-  height: 45px !important;
-  opacity: 0.35 !important;
-}
-
-/* remove aquela bola/forma gigante escura */
-.peopleColumn__133bf .avatar__0a06e::before {
-  background: transparent !important;
-}
-
-/* texto mais legivel */
-.peopleColumn__133bf .username__0a06e,
-.peopleColumn__133bf .discriminator__0a06e,
-.peopleColumn__133bf .subtext__0a06e {
-  color: var(--fm-text-color, #fff) !important;
-  opacity: 0.95 !important;
-}
-
-/* search mais clean */
-.peopleColumn__133bf .searchBar__5ec2f {
-  background: rgba(10, 10, 14, 0.25) !important;
-  backdrop-filter: blur(6px) saturate(140%) !important;
-  -webkit-backdrop-filter: blur(6px) saturate(140%) !important;
-  border: 1px solid rgba(255,255,255,0.08) !important;
-}
-
-/* ───── SEPARAR USERNAME DO @ ───── */
-.peopleColumn__133bf [class*="username_"]::after {
-  content: " ";
-  margin-right: 4px;
-}
-
-/* garante que o @ tenha estilo diferente */
-.peopleColumn__133bf [class*="discriminator_"],
-.peopleColumn__133bf [class*="userTag_"] {
-  opacity: 0.7;
-  margin-left: 4px;
-  font-size: 0.9em;
 }

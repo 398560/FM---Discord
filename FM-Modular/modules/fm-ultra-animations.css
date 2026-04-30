@@ -1,0 +1,565 @@
+/**
+ * @name FM Ultra Animations
+ * @author Plague Doctor
+ * @description Módulo avançado de animações para Discord — fluido, moderno, sem lag
+ * @version 2.0.0
+ *
+ * ─── ÍNDICE ───────────────────────────────────────────────
+ *  1. Variáveis & Config
+ *  2. Keyframes
+ *  3. Global — transições base
+ *  4. Mensagens
+ *  5. Hover & Active
+ *  6. Popouts & Modais
+ *  7. Troca de Canal
+ *  8. Glow
+ *  9. Scroll
+ * 10. Extras
+ * ──────────────────────────────────────────────────────────
+ */
+
+/* ============================================================
+   1. VARIÁVEIS & CONFIG
+   Centralize tudo aqui. Mude uma linha, muda o tema inteiro.
+   ============================================================ */
+:root {
+  /* RGB do accent — usado nos glows (formato: R, G, B) */
+  --fm-main-rgb:        100, 180, 255;
+
+  /* Curvas de movimento */
+  --fm-ease-out:        cubic-bezier(0.22, 0.61, 0.36, 1);
+  --fm-ease-spring:     cubic-bezier(0.34, 1.3,  0.64, 1);  /* leve overshooot */
+  --fm-ease-sharp:      cubic-bezier(0.4,  0,    0.2,  1);  /* Material-style  */
+
+  /* Durações */
+  --fm-dur-fast:   0.12s;
+  --fm-dur-base:   0.2s;
+  --fm-dur-medium: 0.28s;
+  --fm-dur-slow:   0.4s;
+
+  /* Glow */
+  --fm-glow-sm:  0 0  8px rgba(var(--fm-main-rgb), 0.25);
+  --fm-glow-md:  0 0 16px rgba(var(--fm-main-rgb), 0.35);
+  --fm-glow-none: 0 0  0px rgba(var(--fm-main-rgb), 0);
+}
+
+
+/* ============================================================
+   2. KEYFRAMES
+   Nomes prefixados com "fm-" para não colidir com outros temas.
+   Priorizam transform + opacity — zero layout thrashing.
+   ============================================================ */
+
+/* Entrada de mensagem: sobe + aparece + leve escala */
+@keyframes fm-message-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0)   scale(1);
+  }
+}
+
+/* Entrada de popout/menu: zoom a partir do centro */
+@keyframes fm-popout-in {
+  from {
+    opacity: 0;
+    transform: scale(0.94) translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1)    translateY(0);
+  }
+}
+
+/* Saída de popout (apply via JS class ou :not(:empty) hack) */
+@keyframes fm-popout-out {
+  from {
+    opacity: 1;
+    transform: scale(1)    translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.96) translateY(-4px);
+  }
+}
+
+/* Troca de canal: fade + leve zoom-in */
+@keyframes fm-channel-switch {
+  from {
+    opacity: 0;
+    transform: scale(0.987);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Sidebar de canais — slide da esquerda */
+@keyframes fm-sidebar-in {
+  from {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Badge / ping count — bounce rápido */
+@keyframes fm-badge-pop {
+  0%   { transform: scale(0.6); }
+  60%  { transform: scale(1.18); }
+  100% { transform: scale(1); }
+}
+
+/* Ripple de clique em botões */
+@keyframes fm-ripple {
+  from {
+    transform: scale(0);
+    opacity: 0.4;
+  }
+  to {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+/* Fade simples — usado em tooltips */
+@keyframes fm-fade-in {
+  from { opacity: 0; transform: translateY(3px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ============================================================
+   3. GLOBAL — TRANSIÇÕES BASE
+   Apenas propriedades GPU-friendly. Sem "transition: all".
+   ============================================================ */
+
+/*
+ * Elementos interativos genéricos recebem transição base.
+ * Seletores amplos mas limitados a transform + opacity + background.
+ */
+[class*="interactive"],
+[class*="clickable"],
+[class*="button"],
+[class*="icon"],
+[class*="wrapper"],
+[class*="item"],
+[class*="tab"],
+[class*="link"],
+a {
+  transition:
+    transform    var(--fm-dur-base)  var(--fm-ease-out),
+    opacity      var(--fm-dur-base)  var(--fm-ease-out),
+    background   var(--fm-dur-fast)  var(--fm-ease-sharp),
+    box-shadow   var(--fm-dur-base)  var(--fm-ease-out);
+  will-change: transform, opacity;
+}
+
+/* Garantir que o acelerador de GPU seja ativado nos containers críticos */
+[class*="chat"],
+[class*="sidebar"],
+[class*="messages"],
+[class*="scroller"] {
+  transform: translateZ(0);
+}
+
+
+/* ============================================================
+   4. MENSAGENS
+   Animação só na entrada — não toca mensagens já renderizadas.
+   O :not([class*="replying"]) evita re-trigger em edge cases.
+   ============================================================ */
+
+/*
+ * Seletor robusto: pega o wrapper de cada mensagem.
+ * animation-fill-mode: both garante que começa invisível,
+ * evitando o "flash" antes de animar.
+ */
+[class*="message-"]:not([class*="cozy"]) [class*="contents"],
+[class*="messageListItem-"] > [class*="message-"],
+[class*="cozy-"] [class*="messageContent"] {
+  animation:
+    fm-message-in var(--fm-dur-medium) var(--fm-ease-spring) both;
+}
+
+/*
+ * Atraso escalonado nos primeiros itens visíveis.
+ * Dá sensação de "carregamento em cascata" sem ser exagerado.
+ * Limite no 10° item — depois sem delay para não travar scroll.
+ */
+[class*="messageListItem-"]:nth-child(1)  > * { animation-delay: 0.00s; }
+[class*="messageListItem-"]:nth-child(2)  > * { animation-delay: 0.03s; }
+[class*="messageListItem-"]:nth-child(3)  > * { animation-delay: 0.06s; }
+[class*="messageListItem-"]:nth-child(4)  > * { animation-delay: 0.08s; }
+[class*="messageListItem-"]:nth-child(5)  > * { animation-delay: 0.10s; }
+[class*="messageListItem-"]:nth-child(n+6) > * { animation-delay: 0s; }
+
+/* Evitar re-animação em mensagens fixadas ou em edição */
+[class*="messageListItem-"][class*="selected"] > *,
+[class*="messageListItem-"][class*="editing"]  > * {
+  animation: none !important;
+}
+
+/* Reação (emoji) aparece com pop */
+[class*="reaction-"] {
+  animation: fm-badge-pop 0.2s var(--fm-ease-spring) both;
+}
+[class*="reaction-"] + [class*="reaction-"] { animation-delay: 0.04s; }
+[class*="reaction-"] + * + [class*="reaction-"] { animation-delay: 0.08s; }
+
+
+/* ============================================================
+   5. HOVER & ACTIVE
+   translateY + scale leve. Clique escala para baixo (pressed).
+   ============================================================ */
+
+/* — Canais na sidebar ---------------------------------------- */
+[class*="channel-"][class*="link-"]:hover,
+[class*="containerDefault-"]:hover {
+  transform: translateY(-1px) scale(1.012) !important;
+  box-shadow: var(--fm-glow-sm);
+}
+
+[class*="channel-"][class*="link-"]:active,
+[class*="containerDefault-"]:active {
+  transform: translateY(0) scale(0.985) !important;
+  transition-duration: var(--fm-dur-fast) !important;
+}
+
+/* — Membros na sidebar direita ------------------------------- */
+[class*="member-"]:hover,
+[class*="user-"] [class*="wrapper-"]:hover {
+  transform: translateX(3px) !important;
+}
+
+[class*="member-"]:active {
+  transform: translateX(1px) scale(0.99) !important;
+  transition-duration: var(--fm-dur-fast) !important;
+}
+
+/* — Mensagens ----------------------------------------------- */
+[class*="messageListItem-"]:hover {
+  transform: translateY(-1px) !important;
+}
+
+/* — Botões --------------------------------------------------- */
+[class*="button-"]:hover:not(:disabled),
+[class*="lookFilled-"]:hover,
+[class*="lookOutlined-"]:hover,
+[class*="lookGhost-"]:hover {
+  transform: translateY(-2px) scale(1.025) !important;
+}
+
+[class*="button-"]:active:not(:disabled),
+[class*="lookFilled-"]:active,
+[class*="lookOutlined-"]:active {
+  transform: translateY(0) scale(0.96) !important;
+  transition-duration: var(--fm-dur-fast) !important;
+}
+
+/* — Ícones de servidor (guilds) ----------------------------- */
+[class*="wrapper-"][class*="listItem-"]:hover [class*="blob"],
+[class*="guilds-"] [class*="listItem-"]:hover [class*="blob"] {
+  transform: rotate(-8deg) scale(1.08) !important;
+  border-radius: 35% !important;
+}
+
+[class*="wrapper-"][class*="listItem-"]:active [class*="blob"] {
+  transform: rotate(0deg) scale(0.95) !important;
+  transition-duration: var(--fm-dur-fast) !important;
+}
+
+/* — Ícones de ação nas mensagens (reply, react, etc.) ------- */
+[class*="buttonContainer-"]:hover [class*="button-"],
+[class*="messageToolbarItem-"]:hover {
+  transform: scale(1.2) !important;
+}
+
+[class*="messageToolbarItem-"]:active {
+  transform: scale(0.9) !important;
+}
+
+/* — Tabs ---------------------------------------------------- */
+[class*="tab-"]:hover:not([class*="selected"]),
+[class*="item-"][class*="tab"]:hover {
+  transform: translateY(-1px) !important;
+  opacity: 0.9;
+}
+
+/* — Badges (ping) ------------------------------------------- */
+[class*="numberBadge-"],
+[class*="badge-"] {
+  animation: fm-badge-pop 0.25s var(--fm-ease-spring) both;
+}
+
+/* — Avatares ------------------------------------------------ */
+[class*="avatar-"]:hover img,
+[class*="avatarWrapper-"]:hover img {
+  transform: scale(1.08) !important;
+  transition: transform var(--fm-dur-base) var(--fm-ease-spring) !important;
+}
+
+
+/* ============================================================
+   6. POPOUTS & MODAIS
+   scale + fade. transform-origin garante que parte do lugar certo.
+   ============================================================ */
+
+/* Menu de contexto */
+[class*="menu-"],
+[class*="contextMenu-"] {
+  animation: fm-popout-in var(--fm-dur-base) var(--fm-ease-spring) both;
+  transform-origin: top left;
+}
+
+/* Popout de perfil / user card */
+[class*="userPopout-"],
+[class*="userProfile-"],
+[class*="profilePanel-"] {
+  animation: fm-popout-in var(--fm-dur-medium) var(--fm-ease-spring) both;
+  transform-origin: top center;
+}
+
+/* Modais (configurações, etc.) */
+[class*="modal-"] [class*="content-"],
+[class*="root-"][class*="modal"] {
+  animation: fm-popout-in var(--fm-dur-medium) var(--fm-ease-out) both;
+  transform-origin: center center;
+}
+
+/* Emoji picker */
+[class*="emojiPicker-"],
+[class*="picker-"][class*="emoji"] {
+  animation: fm-popout-in var(--fm-dur-base) var(--fm-ease-spring) both;
+  transform-origin: bottom right;
+}
+
+/* Tooltips */
+[class*="tooltip-"],
+[class*="layer-"] [class*="tooltip"] {
+  animation: fm-fade-in var(--fm-dur-fast) var(--fm-ease-out) both;
+}
+
+/* Dropdown genérico */
+[class*="menu-"][class*="select"],
+[class*="popout-"],
+[class*="layer-"]:not([class*="tooltip"]) {
+  animation: fm-popout-in var(--fm-dur-base) var(--fm-ease-spring) both;
+  transform-origin: top center;
+}
+
+/*
+ * Evita flickering em elementos que usam display:none
+ * antes de serem inseridos no DOM.
+ */
+[class*="menu-"]:empty,
+[class*="popout-"]:empty {
+  visibility: hidden;
+}
+
+
+/* ============================================================
+   7. TROCA DE CANAL
+   O container de mensagens recebe fm-channel-switch ao
+   trocar de rota. Discord re-renderiza o scroller, então
+   a animação dispara naturalmente.
+   ============================================================ */
+
+[class*="chat-"] [class*="content-"],
+[class*="chatContent-"],
+[class*="messagesWrapper-"],
+[class*="scroller-"][class*="messages"] {
+  animation: fm-channel-switch var(--fm-dur-medium) var(--fm-ease-out) both;
+}
+
+/* Sidebar de canais também anima ao trocar de servidor */
+[class*="sidebar-"] [class*="content-"],
+[class*="channels-"] [class*="scroller"] {
+  animation: fm-sidebar-in var(--fm-dur-medium) var(--fm-ease-out) both;
+}
+
+/* Cabeçalho do canal */
+[class*="header-"][class*="chat"],
+[class*="toolbar-"] {
+  animation: fm-fade-in var(--fm-dur-base) var(--fm-ease-out) both;
+}
+
+
+/* ============================================================
+   8. GLOW
+   Apenas em hover — via box-shadow. Sem filter: drop-shadow
+   em massa (caro demais).
+   Cor controlada por --fm-main-rgb.
+   ============================================================ */
+
+/* Botões principais */
+[class*="button-"][class*="lookFilled-"]:hover,
+[class*="lookFilled-"]:hover:not(:disabled) {
+  box-shadow:
+    var(--fm-glow-md),
+    inset 0 1px 0 rgba(255,255,255,0.15) !important;
+}
+
+/* Canais com menção / não-lidos — glow sutil permanente */
+[class*="channel-"][class*="unread-"],
+[class*="containerDefault-"][class*="unread-"] {
+  box-shadow: inset 2px 0 0 rgba(var(--fm-main-rgb), 0.7) !important;
+}
+
+/* Canal ativo */
+[class*="channel-"][class*="selected"],
+[class*="containerDefault-"][class*="modeSelected"] {
+  box-shadow:
+    inset 0 0 0 1px rgba(var(--fm-main-rgb), 0.3),
+    0 2px 12px rgba(var(--fm-main-rgb), 0.15) !important;
+}
+
+/* Avatares no hover */
+[class*="avatarWrapper-"]:hover,
+[class*="wrapper-"][class*="avatar"]:hover {
+  box-shadow: 0 0 0 2px rgba(var(--fm-main-rgb), 0.5) !important;
+  border-radius: 50%;
+}
+
+/* Input em foco */
+[class*="input-"]:focus-within,
+[class*="textArea-"]:focus-within,
+[class*="channelTextArea-"]:focus-within {
+  box-shadow:
+    0 0 0 1px rgba(var(--fm-main-rgb), 0.5),
+    var(--fm-glow-sm) !important;
+}
+
+/* Ícones de servidor ativos */
+[class*="wrapper-"][class*="listItem-"] [class*="selected"] ~ * [class*="blob"],
+[class*="guilds-"] [class*="selected"] [class*="blob"] {
+  box-shadow: var(--fm-glow-md) !important;
+}
+
+
+/* ============================================================
+   9. SCROLL
+   smooth nativo (performático — usa CSS, não JS).
+   Sem overflow-behavior pesado.
+   ============================================================ */
+
+[class*="scroller-"],
+[class*="scrollerBase-"],
+[class*="auto-"],
+[class*="thin-"],
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+/*
+ * Overscroll behavior: evita que o scroll "borre" para a página pai
+ * em dispositivos/plataformas que suportam.
+ */
+[class*="scroller-"],
+[class*="scrollerBase-"] {
+  overscroll-behavior: contain;
+}
+
+
+/* ============================================================
+   10. EXTRAS
+   Detalhes que fazem diferença na percepção de qualidade.
+   ============================================================ */
+
+/* — Transição de opacidade no typing indicator -------------- */
+[class*="typing-"] {
+  animation: fm-fade-in var(--fm-dur-base) var(--fm-ease-out) both;
+  transition: opacity var(--fm-dur-base) var(--fm-ease-out);
+}
+
+/* — Separador de data entre mensagens ----------------------- */
+[class*="divider-"][class*="hasContent"] {
+  animation: fm-fade-in var(--fm-dur-slow) var(--fm-ease-out) both;
+}
+
+/* — Notificação de nova mensagem (barra "ver nova mensagem") - */
+[class*="newMessagesBar-"],
+[class*="jumpToPresentBar-"] {
+  animation: fm-popout-in var(--fm-dur-base) var(--fm-ease-spring) both;
+  transform-origin: bottom center;
+}
+
+/* — Thread / forum card ------------------------------------- */
+[class*="card-"][class*="forum"],
+[class*="thread-"] {
+  transition:
+    transform   var(--fm-dur-base) var(--fm-ease-out),
+    box-shadow  var(--fm-dur-base) var(--fm-ease-out) !important;
+}
+
+[class*="card-"][class*="forum"]:hover,
+[class*="thread-"]:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: var(--fm-glow-sm), 0 4px 16px rgba(0,0,0,0.3) !important;
+}
+
+/* — Switch toggle ------------------------------------------- */
+[class*="slider-"]:not(:disabled) {
+  transition: transform var(--fm-dur-fast) var(--fm-ease-spring) !important;
+}
+
+[class*="slider-"]:not(:disabled):active {
+  transform: scale(0.9) !important;
+}
+
+/* — Imagens anexadas — aparecem com fade -------------------- */
+[class*="imageWrapper-"],
+[class*="embedWrapper-"],
+[class*="attachment-"] {
+  animation: fm-fade-in var(--fm-dur-medium) var(--fm-ease-out) both;
+  transition:
+    transform  var(--fm-dur-base) var(--fm-ease-out),
+    box-shadow var(--fm-dur-base) var(--fm-ease-out) !important;
+}
+
+[class*="imageWrapper-"]:hover {
+  transform: scale(1.015) !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4) !important;
+}
+
+/* — Stickers & GIFs ----------------------------------------- */
+[class*="stickerAsset-"],
+[class*="gif-"] {
+  animation: fm-fade-in var(--fm-dur-medium) var(--fm-ease-out) both;
+}
+
+/* — Painel de voz/vídeo (tiles) ----------------------------- */
+[class*="tile-"] {
+  transition:
+    transform  var(--fm-dur-base) var(--fm-ease-out),
+    box-shadow var(--fm-dur-base) var(--fm-ease-out) !important;
+}
+
+[class*="tile-"]:hover {
+  transform: scale(1.02) !important;
+  box-shadow: var(--fm-glow-sm), 0 4px 16px rgba(0,0,0,0.4) !important;
+}
+
+/* — Itens de settings --------------------------------------- */
+[class*="item-"][class*="settings"]:hover,
+[class*="side-"] [class*="item-"]:hover {
+  transform: translateX(4px) !important;
+  transition-duration: var(--fm-dur-fast) !important;
+}
+
+/* — Roleta de emoji / autocomplete -------------------------- */
+[class*="autocomplete-"],
+[class*="selectorPopout-"] {
+  animation: fm-popout-in var(--fm-dur-base) var(--fm-ease-spring) both;
+  transform-origin: bottom center;
+}
+
+/* ─── FIM ─────────────────────────────────────────────────── */
