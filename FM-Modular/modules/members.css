@@ -121,32 +121,6 @@ div:not(:hover) > .members_c8ffbb > div {
     flex-wrap: wrap;
 }
 
-/* ───── FIX HITBOX DA LISTA DE MEMBROS ───── */
-
-/* aumenta a area sensivel do hover */
-.membersWrap_c8ffbb {
-  padding-left: 220px !important;
-  margin-left: calc(-220px - var(--member-list-collapsed-transform)) !important;
-}
-
-/* quando passa o mouse, mantém aberto */
-.membersWrap_c8ffbb:hover {
-  transform: none !important;
-  margin-left: 0 !important;
-}
-
-/* garante que a lista aberta tenha area real */
-.membersWrap_c8ffbb:hover .members_c8ffbb {
-  width: var(--custom-member-list-width) !important;
-  min-width: var(--custom-member-list-width) !important;
-  pointer-events: auto !important;
-}
-
-/* deixa transição suave */
-.membersWrap_c8ffbb,
-.members_c8ffbb {
-  transition: all 0.35s ease !important;
-}
 
 /* FIX HITBOX SEM QUEBRAR LAYOUT */
 
