@@ -2,7 +2,7 @@
  * @name FM Modular — Transparência Clean
  * @author Plague Doctor
  * @description Transparência clean com leitura perfeita e blur só onde deve
- * @version 1.4.0
+ * @version 1.4.1
  */
 
 :root {
@@ -173,4 +173,27 @@
 #app-mount .folderPreviewWrapper__48112::before,
 #app-mount [class*="folderIconWrapper_"]::before {
   content: none !important;
+}
+
+/* ───── PERFIL / USER POPOUT COM BLUR FORÇADO ───── */
+#app-mount [class*="userPopout"],
+#app-mount [class*="userProfile"],
+#app-mount [class*="profilePanel"],
+#app-mount [class*="outer_"],
+#app-mount [class*="inner_"][class*="user"],
+#app-mount [class*="overlayBackground_"],
+#app-mount [class*="userPopoutOverlayBackground_"],
+#app-mount [class*="body_"][class*="user"],
+#app-mount [class*="footer_"][class*="user"],
+#app-mount [class*="profileEffects_"],
+#app-mount [class*="profileColors_"] {
+  background: rgba(8, 8, 12, 0.88) !important;
+  backdrop-filter: blur(18px) saturate(170%) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(170%) !important;
+  border-color: rgba(var(--fm-main-rgb, 166, 166, 166), 0.30) !important;
+}
+
+/* banner mais suave, sem sumir */
+#app-mount [class*="banner_"] {
+  background-color: rgba(8, 8, 12, 0.35) !important;
 }
