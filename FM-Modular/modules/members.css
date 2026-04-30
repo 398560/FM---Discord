@@ -120,6 +120,32 @@ div:not(:hover) > .members_c8ffbb > div {
 .members_c8ffbb:not(:hover) > .vc-membercount-member-list {
     flex-wrap: wrap;
 }
+/* ───── FIX HITBOX DA LISTA DE MEMBROS ───── */
+
+/* aumenta a area sensivel do hover */
+.membersWrap_c8ffbb {
+  padding-left: 220px !important;
+  margin-left: calc(-220px - var(--member-list-collapsed-transform)) !important;
+}
+
+/* quando passa o mouse, mantém aberto */
+.membersWrap_c8ffbb:hover {
+  transform: none !important;
+  margin-left: 0 !important;
+}
+
+/* garante que a lista aberta tenha area real */
+.membersWrap_c8ffbb:hover .members_c8ffbb {
+  width: var(--custom-member-list-width) !important;
+  min-width: var(--custom-member-list-width) !important;
+  pointer-events: auto !important;
+}
+
+/* deixa transição suave */
+.membersWrap_c8ffbb,
+.members_c8ffbb {
+  transition: all 0.35s ease !important;
+}
 
 /* Avatar-only DM profile */
 /* .outer_c0bea0:not(.user-profile-modal):not(.user-profile-popout) is the only way to select just the DM profile area */
