@@ -54,10 +54,9 @@
 .theme-dark {
     --FG-search-background: var(--background-tertiary);
 
-    --FG-cards-background-normal: var(--background-secondary);
-    --FG-cards-background-hover: var(--activity-card-background);
-
-    --FG-cards-background-active: var(--activity-card-background);
+--FG-cards-background-normal: rgba(15, 15, 20, 0.35);
+--FG-cards-background-hover: rgba(15, 15, 20, 0.55);
+--FG-cards-background-active: rgba(15, 15, 20, 0.65);
 
     --FG-cards-border-color-normal: var(--background-modifier-accent);
     --FG-cards-border-color-hover: var(--background-modifier-accent);
@@ -657,4 +656,23 @@
 /* Hide the native dividers so they don't consume grid cells */
 .peopleColumn__133bf .peopleList__5ec2f > div > .divider_cc6179 {
     display: none !important;
+}
+
+/* ===== FIX TRANSPARENCIA FM ===== */
+
+.peopleColumn__133bf .peopleListItem_cc6179 {
+    background: var(--FG-cards-background-normal) !important;
+    backdrop-filter: blur(10px) saturate(140%);
+    -webkit-backdrop-filter: blur(10px) saturate(140%);
+    border: 1px solid rgba(255,255,255,0.08) !important;
+}
+
+/* hover */
+.peopleColumn__133bf .peopleListItem_cc6179:hover {
+    background: var(--FG-cards-background-hover) !important;
+}
+
+/* ativo */
+.peopleColumn__133bf .peopleListItem_cc6179.active_cc6179 {
+    background: var(--FG-cards-background-active) !important;
 }
