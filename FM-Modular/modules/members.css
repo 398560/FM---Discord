@@ -148,6 +148,7 @@ div:not(:hover) > .members_c8ffbb > div {
   transition: all 0.35s ease !important;
 }
 
+
 /* Avatar-only DM profile */
 /* .outer_c0bea0:not(.user-profile-modal):not(.user-profile-popout) is the only way to select just the DM profile area */
 /*.outer_c0bea0:not(.user-profile-modal):not(.user-profile-popout) {*/
