@@ -1,13 +1,13 @@
 /**
  * @name FM Modular — Transparência Clean
  * @author Plague Doctor
- * @description Transparência clean com leitura melhor, menus, @mention, call status e activity corrigidos.
- * @version 1.3.0
+ * @description Transparência clean com leitura perfeita e blur só onde deve
+ * @version 1.4.0
  */
 
 :root {
---fm-module-message-bg: rgba(10, 10, 14, 0.12);
---fm-module-message-bg-hover: rgba(25, 25, 35, 0.22);
+  --fm-module-message-bg: rgba(10, 10, 14, 0.12);
+  --fm-module-message-bg-hover: rgba(25, 25, 35, 0.22);
   --fm-module-message-border: rgba(255, 255, 255, 0.08);
   --fm-module-message-border-hover: rgba(255, 255, 255, 0.16);
 
@@ -17,7 +17,6 @@
 
   --fm-module-surface-blur: blur(8px) saturate(160%);
   --fm-module-popout-blur: blur(18px) saturate(170%);
-  --fm-module-message-blur: blur(4px);
 
   --fm-module-radius: 10px;
 }
@@ -51,7 +50,7 @@
   -webkit-backdrop-filter: var(--fm-module-surface-blur) !important;
 }
 
-/* menus / botao direito / @ / busca */
+/* menus / click direito / @ / busca */
 #app-mount [role="menu"],
 #app-mount [class*="menu_"],
 #app-mount [class*="submenu_"],
@@ -79,7 +78,7 @@
   background: rgba(var(--fm-main-rgb, 166, 166, 166), 0.25) !important;
 }
 
-/* status call / barras */
+/* call / barras */
 #app-mount [class*="callContainer_"],
 #app-mount [class*="voiceCallWrapper_"],
 #app-mount [class*="channelCall_"],
@@ -92,14 +91,16 @@
   border: 1px solid rgba(var(--fm-main-rgb, 166, 166, 166), 0.30) !important;
 }
 
-/* mensagens */
+/* mensagens (SEM BLUR) */
 #app-mount .message__5126c,
 #app-mount .wrapper_c19a55 {
   background: var(--fm-module-message-bg) !important;
   border: 1px solid var(--fm-module-message-border) !important;
   border-radius: var(--fm-module-radius) !important;
-  backdrop-filter: var(--fm-module-message-blur) !important;
-  -webkit-backdrop-filter: var(--fm-module-message-blur) !important;
+
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+
   margin: 3px 0 !important;
   transition: all 0.18s ease !important;
 }
@@ -118,15 +119,9 @@
   border-color: rgba(var(--fm-main-rgb, 166, 166, 166), 0.38) !important;
 }
 
-/* limpa conteudo interno */
+/* limpa conteudo */
 #app-mount [class*="contents_"],
 #app-mount [class*="messageContent_"] {
-  background: transparent !important;
-  border: none !important;
-}
-
-/* reply limpa */
-#app-mount [class*="repliedMessage_"] {
   background: transparent !important;
   border: none !important;
 }
@@ -152,7 +147,7 @@
   -webkit-backdrop-filter: var(--fm-module-popout-blur) !important;
 }
 
-/* card de atividade / hover em call */
+/* activity / hover call */
 #app-mount [class*="activityPanel_"],
 #app-mount [class*="activity_"],
 #app-mount [class*="userPopoutOverlayBackground_"],
@@ -178,27 +173,4 @@
 #app-mount .folderPreviewWrapper__48112::before,
 #app-mount [class*="folderIconWrapper_"]::before {
   content: none !important;
-}
-
-/* ───── PERFIL / USER POPOUT COM BLUR FORÇADO ───── */
-#app-mount [class*="userPopout"],
-#app-mount [class*="userProfile"],
-#app-mount [class*="profilePanel"],
-#app-mount [class*="outer_"],
-#app-mount [class*="inner_"][class*="user"],
-#app-mount [class*="overlayBackground_"],
-#app-mount [class*="userPopoutOverlayBackground_"],
-#app-mount [class*="body_"][class*="user"],
-#app-mount [class*="footer_"][class*="user"] {
-  background: rgba(8, 8, 12, 0.88) !important;
-  backdrop-filter: blur(18px) saturate(170%) !important;
-  -webkit-backdrop-filter: blur(18px) saturate(170%) !important;
-  border-color: rgba(var(--fm-main-rgb, 166, 166, 166), 0.30) !important;
-}
-
-/* parte branca/clara do perfil */
-#app-mount [class*="banner_"],
-#app-mount [class*="profileColors_"],
-#app-mount [class*="profileEffects_"] {
-  background-color: rgba(8, 8, 12, 0.35) !important;
 }
