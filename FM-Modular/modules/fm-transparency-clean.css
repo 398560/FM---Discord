@@ -2,7 +2,7 @@
  * @name FM Modular — Transparência Clean
  * @author Plague Doctor
  * @description Transparência clean, DM sem blur, menus legíveis e profiles corrigidos
- * @version 1.5.1
+ * @version 1.5.2
  */
 
 :root {
@@ -197,7 +197,7 @@
 #app-mount .members_c8ffbb,
 #app-mount .container_c8ffbb,
 #app-mount [class*="members_"] {
-  background: rgba(10, 10, 14, 0.18) !important;
+  background: rgba(10, 10, 14, 0.08) !important;
   backdrop-filter: blur(6px) saturate(140%) !important;
   -webkit-backdrop-filter: blur(6px) saturate(140%) !important;
 }
